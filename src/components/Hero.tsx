@@ -57,7 +57,7 @@ export default function Hero() {
           <div className="mt-[48px] flex items-center gap-[37px]">
             <Link
               href="/learn"
-              className="shadow-edenic-cta group inline-flex h-[64px] items-center gap-3 rounded-full border border-white/45 bg-gradient-to-b from-[#a067ec] to-[#8449da] px-[38px] text-[clamp(17px,1.35vw,25px)] font-bold text-white transition-transform hover:scale-[1.03] xl:h-[80px]"
+              className="shadow-edenic-cta group inline-flex h-[64px] items-center gap-[14px] rounded-full border border-white/45 bg-gradient-to-b from-[#a067ec] to-[#8449da] px-[48px] text-[clamp(17px,1.35vw,25px)] font-bold text-white transition-transform hover:scale-[1.03] xl:h-[80px]"
             >
               Start the Adventure
               <Star
@@ -68,7 +68,7 @@ export default function Hero() {
 
             <Link
               href="/watch"
-              className="group inline-flex items-center gap-4 text-[clamp(16px,1.2vw,22px)] font-semibold text-white"
+              className="group inline-flex items-center gap-[21px] text-[clamp(15px,1.08vw,20px)] font-semibold text-white"
             >
               <span className="grid size-[48px] place-items-center rounded-full border border-white/50 transition-colors group-hover:bg-white/15 xl:size-[60px]">
                 <Play

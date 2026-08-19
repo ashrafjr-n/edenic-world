@@ -38,7 +38,7 @@ const CARDS: SectionCard[] = [
 
 export default function HomeSectionCards() {
   return (
-    <section className="relative z-10 -mt-px pb-[40px]">
+    <section className="relative z-10 -mt-[52px] pb-[40px]">
       <Container>
         <ul className="grid gap-[32px] md:grid-cols-3">
           {CARDS.map(({ title, description, href, image, surface }) => (
@@ -57,10 +57,10 @@ export default function HomeSectionCards() {
                 />
 
                 <div className="relative">
-                  <h2 className="font-display text-[clamp(30px,2.3vw,42px)] leading-[1.1] font-extrabold text-white">
+                  <h2 className="font-display text-[clamp(30px,2.54vw,47px)] leading-[1.1] font-extrabold text-white">
                     {title}
                   </h2>
-                  <p className="mt-[16px] max-w-[250px] text-[clamp(16px,1.15vw,21px)] leading-[1.42] font-medium text-white/90">
+                  <p className="mt-[18px] max-w-[272px] text-[clamp(16px,1.15vw,21px)] leading-[1.43] font-medium text-white/90">
                     {description}
                   </p>
                 </div>
