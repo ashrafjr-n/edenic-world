@@ -37,7 +37,7 @@ export default function Header({ activeHref = "/" }: HeaderProps) {
 
         {/* Sits slightly left of dead centre so it reads as balanced against
             the heavier action group on the right. */}
-        <nav className="hidden flex-1 justify-center lg:flex xl:-translate-x-[54px]">
+        <nav className="hidden flex-1 justify-center lg:flex xl:-translate-x-[40px]">
           <ul className="flex items-center gap-4">
             {NAV_LINKS.map(({ label, href }) => {
               const isActive = href === activeHref;
