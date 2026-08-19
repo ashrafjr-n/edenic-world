@@ -6,14 +6,27 @@ import HeroCurve from "@/components/HeroCurve";
 
 export default function Hero() {
   return (
-    <section className="relative isolate h-[47vw] max-h-[940px] min-h-[720px] w-full overflow-hidden">
+    <section className="relative isolate h-[50.5vw] max-h-[990px] min-h-[760px] w-full overflow-hidden">
+      {/* The artwork is wider than the hero box, so it is laid in at full width
+          along the bottom and the sky above it is extended with a blurred copy
+          of itself — that keeps the whole landscape in frame, uncropped. */}
       <Image
         src="/images/hero.jpg"
-        alt="Nova, Pinki and Bloo walking through the Edenic World"
+        alt=""
+        aria-hidden="true"
         fill
         priority
         sizes="100vw"
-        className="object-cover object-center"
+        className="scale-125 object-cover object-top blur-[80px]"
+      />
+      <Image
+        src="/images/hero.jpg"
+        alt="Nova, Pinki and Bloo walking through the Edenic World"
+        width={1680}
+        height={640}
+        priority
+        sizes="100vw"
+        className="absolute inset-x-0 bottom-[45px] w-full [mask-image:linear-gradient(to_bottom,transparent_0,#000_90px)]"
       />
 
       {/* Atmospheric glow that lifts the characters out of the scene. */}
