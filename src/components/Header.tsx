@@ -23,7 +23,7 @@ type HeaderProps = {
 export default function Header({ activeHref = "/" }: HeaderProps) {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
-      <div className="flex items-center gap-6 px-6 py-5 sm:px-10 lg:px-[68px] lg:py-[28px]">
+      <div className="flex items-center gap-6 px-6 py-5 sm:px-10 lg:px-[72px] lg:py-[22px]">
         <Link href="/" className="shrink-0" aria-label="Edenic World — home">
           <Image
             src="/images/edenic-logo.png"
@@ -71,7 +71,7 @@ export default function Header({ activeHref = "/" }: HeaderProps) {
 
           <Link
             href="/parents"
-            className="flex h-[52px] items-center gap-3 rounded-full border border-white/40 px-6 text-[20px] font-semibold text-edenic-white transition-colors hover:bg-white/10 lg:h-[66px] lg:px-[30px]"
+            className="flex h-[52px] items-center gap-3 rounded-full border border-white/40 px-6 text-[20px] font-semibold text-edenic-white transition-colors hover:bg-white/10 lg:h-[66px] lg:px-[44px]"
           >
             <UserRound className="size-6" strokeWidth={2.25} aria-hidden="true" />
             Parents
