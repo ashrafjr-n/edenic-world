@@ -56,11 +56,15 @@ export default function HomeSectionCards() {
                   className="card-art-mask pointer-events-none absolute right-[10px] bottom-[22px] h-[88%] w-auto max-w-none object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
+                {/* Grounds the card — the surface settles into the page colour
+                    towards the bottom instead of glowing evenly all over. */}
+                <span className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent from-35% to-edenic-bg/30" />
+
                 <div className="relative">
                   <h2 className="font-display text-[clamp(30px,2.54vw,47px)] leading-[1.1] font-extrabold text-white">
                     {title}
                   </h2>
-                  <p className="mt-[12px] max-w-[272px] text-[clamp(15px,1.06vw,19.6px)] leading-[1.38] font-medium text-white/90">
+                  <p className="mt-[12px] max-w-[258px] text-[clamp(15px,1.06vw,19.6px)] leading-[1.38] font-medium text-white/90">
                     {description}
                   </p>
                 </div>
