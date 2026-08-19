@@ -45,7 +45,7 @@ export default function Hero() {
       {/* Keeps the copy readable without flattening the art behind it. */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-edenic-bg/58 via-edenic-bg/8 to-transparent" />
 
-      <Container className="relative z-20 flex h-full flex-col justify-start pt-[13vh]">
+      <Container className="relative z-20 flex h-full flex-col justify-start pt-[15vh]">
         <div className="max-w-[760px] xl:pl-[44px]">
           <h1 className="font-display font-bold tracking-[-0.005em] drop-shadow-[0_6px_24px_rgba(38,29,82,0.45)]">
             <span className="block text-[clamp(38px,min(4.35vw,6.55vh),81px)] leading-[1.0] text-white">
