@@ -35,7 +35,9 @@ export default function Header({ activeHref = "/" }: HeaderProps) {
           />
         </Link>
 
-        <nav className="hidden flex-1 justify-center lg:flex">
+        {/* Sits slightly left of dead centre so it reads as balanced against
+            the heavier action group on the right. */}
+        <nav className="hidden flex-1 justify-center lg:flex xl:-translate-x-[54px]">
           <ul className="flex items-center gap-4">
             {NAV_LINKS.map(({ label, href }) => {
               const isActive = href === activeHref;
@@ -44,7 +46,7 @@ export default function Header({ activeHref = "/" }: HeaderProps) {
                   <Link
                     href={href}
                     aria-current={isActive ? "page" : undefined}
-                    className={`block rounded-full px-[22px] py-[9px] text-[20px] leading-[21px] font-semibold transition-colors ${
+                    className={`block rounded-full px-[22px] py-[9px] text-[19.5px] leading-[21px] font-semibold transition-colors ${
                       isActive
                         ? "bg-white text-edenic-deep"
                         : "text-edenic-white hover:text-white"
