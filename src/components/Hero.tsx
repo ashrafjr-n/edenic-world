@@ -32,7 +32,7 @@ export default function Hero() {
         height={640}
         priority
         sizes="100vw"
-        className="absolute inset-x-0 bottom-[38px] w-full [mask-image:linear-gradient(to_bottom,transparent_0,#000_90px)]"
+        className="absolute inset-x-0 bottom-[80px] w-full [mask-image:linear-gradient(to_bottom,transparent_0,#000_90px)]"
       />
 
       {/* Deep night sky over the extended top, so the header sits on colour
@@ -51,7 +51,7 @@ export default function Hero() {
             <span className="block text-[clamp(38px,min(4.35vw,6.55vh),81px)] leading-[1.0] text-white">
               Learn, Play,
             </span>
-            <span className="text-imagine-gradient -mt-[0.06em] block text-[clamp(54px,min(6.1vw,9.2vh),114px)] leading-[1.0]">
+            <span className="text-imagine-gradient -mt-[0.06em] block w-fit text-[clamp(54px,min(6.1vw,9.2vh),114px)] leading-[1.0]">
               Imagine!
             </span>
           </h1>
