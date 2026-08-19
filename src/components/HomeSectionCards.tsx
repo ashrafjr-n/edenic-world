@@ -53,7 +53,7 @@ export default function HomeSectionCards() {
                   alt=""
                   width={600}
                   height={490}
-                  className="card-art-mask pointer-events-none absolute right-[44px] bottom-[24px] h-[85%] w-auto max-w-none object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="card-art-mask pointer-events-none absolute right-[10px] bottom-[22px] h-[88%] w-auto max-w-none object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
                 <div className="relative">
