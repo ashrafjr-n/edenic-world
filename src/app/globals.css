@@ -14,6 +14,9 @@
   /* Secondary accents — used sparingly */
   --color-edenic-orange: #e0913f;
   --color-edenic-blue: #8fd0ec;
+
+  /* Header background — sampled exactly from reference screenshot */
+  --color-edenic-header: #1a1329;
 }
 
 @theme inline {
@@ -29,6 +32,7 @@
   --color-edenic-gold: var(--color-edenic-gold);
   --color-edenic-orange: var(--color-edenic-orange);
   --color-edenic-blue: var(--color-edenic-blue);
+  --color-edenic-header: var(--color-edenic-header);
 
   --animate-icon-wiggle: icon-wiggle 0.5s ease-in-out;
 }
