@@ -35,13 +35,13 @@ export default function Hero() {
       {/* Keeps the copy readable without flattening the art behind it. */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-edenic-bg/45 via-edenic-bg/5 to-transparent" />
 
-      <Container className="relative z-20 flex h-full flex-col justify-start pt-[16vw] xl:pt-[248px]">
+      <Container className="relative z-20 flex h-full flex-col justify-start pt-[16vw] xl:pt-[281px]">
         <div className="max-w-[760px] xl:pl-[44px]">
-          <h1 className="font-display font-bold tracking-[0.008em] drop-shadow-[0_6px_24px_rgba(38,29,82,0.45)]">
-            <span className="block text-[clamp(44px,4.7vw,87px)] leading-[1.0] text-white">
+          <h1 className="font-display font-bold tracking-[-0.005em] drop-shadow-[0_6px_24px_rgba(38,29,82,0.45)]">
+            <span className="block text-[clamp(46px,4.86vw,90px)] leading-[1.0] text-white">
               Learn, Play,
             </span>
-            <span className="-mt-[0.06em] block bg-gradient-to-r from-[#efa6e2] via-[#f0aead] via-55% to-[#ce84f0] bg-clip-text text-[clamp(62px,6.63vw,123px)] leading-[1.0] text-transparent">
+            <span className="-mt-[0.06em] block bg-gradient-to-r from-[#efa6e2] via-[#f0aead] via-55% to-[#ce84f0] bg-clip-text text-[clamp(64px,6.85vw,127px)] leading-[1.0] text-transparent">
               Imagine!
             </span>
           </h1>
