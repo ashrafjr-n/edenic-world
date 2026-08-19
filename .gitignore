@@ -46,3 +46,7 @@ next-env.d.ts
 .claude/
 .agents/
 skills-lock.json
+
+# local-only AI-assistant workflow files, never tracked
+CLAUDE.md
+vibe.md
