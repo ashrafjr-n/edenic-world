@@ -34,7 +34,7 @@
 }
 
 @theme inline {
-  --font-display: var(--font-baloo);
+  --font-display: var(--font-fredoka);
   --font-sans: var(--font-nunito);
 
   --color-edenic-bg: var(--color-edenic-bg);

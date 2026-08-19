@@ -37,16 +37,16 @@ export default function Hero() {
 
       <Container className="relative z-20 flex h-full flex-col justify-start pt-[16vw] xl:pt-[248px]">
         <div className="max-w-[760px] xl:pl-[44px]">
-          <h1 className="font-display font-extrabold tracking-[-0.01em] drop-shadow-[0_6px_24px_rgba(38,29,82,0.45)]">
-            <span className="block text-[clamp(44px,4.95vw,92px)] leading-[1.05] text-white">
+          <h1 className="font-display font-bold tracking-[0.008em] drop-shadow-[0_6px_24px_rgba(38,29,82,0.45)]">
+            <span className="block text-[clamp(44px,4.7vw,87px)] leading-[1.0] text-white">
               Learn, Play,
             </span>
-            <span className="-mt-[0.1em] block bg-gradient-to-r from-[#efa6e2] via-[#f0aead] via-55% to-[#ce84f0] bg-clip-text text-[clamp(60px,6.9vw,128px)] leading-[1.05] text-transparent">
+            <span className="-mt-[0.06em] block bg-gradient-to-r from-[#efa6e2] via-[#f0aead] via-55% to-[#ce84f0] bg-clip-text text-[clamp(62px,6.63vw,123px)] leading-[1.0] text-transparent">
               Imagine!
             </span>
           </h1>
 
-          <p className="mt-[26px] max-w-[392px] text-[clamp(17px,1.4vw,26px)] leading-[1.35] font-medium text-white">
+          <p className="mt-[26px] max-w-[400px] text-[clamp(18px,1.5vw,28px)] leading-[1.35] font-medium text-white">
             Step into a magical world with{" "}
             <span className="font-bold text-edenic-nova">Nova</span>,{" "}
             <span className="font-bold text-edenic-pinki">Pinki</span> &{" "}

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Baloo_2, Nunito } from "next/font/google";
+import { Fredoka, Nunito } from "next/font/google";
 import "./globals.css";
 
 /* Display face — chunky, rounded, used for headlines and card titles. */
-const baloo = Baloo_2({
-  variable: "--font-baloo",
+const fredoka = Fredoka({
+  variable: "--font-fredoka",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["500", "600", "700"],
 });
 
 /* UI face — nav, body copy and buttons. */
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${baloo.variable} ${nunito.variable} h-full antialiased`}
+      className={`${fredoka.variable} ${nunito.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col overflow-x-hidden">
         {children}
