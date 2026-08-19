@@ -10,13 +10,13 @@ const NAV_LINKS = [
 
 export default function Header() {
   return (
-    <header className="absolute inset-x-0 top-0 z-20 flex items-center justify-between border-b border-white/40 bg-white/55 px-6 py-3 shadow-[0_8px_32px_rgba(32,27,56,0.10)] backdrop-blur-xl md:px-10 md:py-4">
+    <header className="absolute inset-x-0 top-0 z-20 flex items-center justify-between border-b border-white/10 bg-gradient-to-b from-edenic-200/85 via-edenic-300/85 to-edenic-400/90 px-6 py-3 shadow-[0_8px_32px_rgba(8,0,16,0.35)] backdrop-blur-xl md:px-10 md:py-4">
       <Link href="/" className="shrink-0">
         <Image
           src="/images/edenic-logo.png"
           alt="Edenic World"
           width={140}
-          height={78}
+          height={74}
           priority
           className="h-10 w-auto md:h-12"
         />
@@ -28,15 +28,13 @@ export default function Header() {
             <li key={href}>
               <Link
                 href={href}
-                className="group flex items-center gap-2 text-sm font-semibold tracking-wide text-edenic-400 md:text-base"
+                className="group flex items-center gap-2 text-sm font-semibold tracking-wide text-white/90 md:text-base"
               >
                 <Icon
-                  className="size-5 text-edenic-gold transition-[filter] duration-200 group-hover:drop-shadow-[0_0_8px_rgba(201,168,76,0.7)] md:size-6"
+                  className="size-5 text-edenic-gold group-hover:animate-icon-wiggle md:size-6"
                   aria-hidden="true"
                 />
-                <span className="transition-colors duration-200 group-hover:text-edenic-gold">
-                  {label}
-                </span>
+                {label}
               </Link>
             </li>
           ))}
