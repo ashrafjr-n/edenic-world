@@ -31,7 +31,7 @@ export default function Header() {
                 className="group flex items-center gap-2 text-sm font-semibold tracking-wide text-white/90 md:text-base"
               >
                 <Icon
-                  className="size-5 text-edenic-gold group-hover:animate-icon-wiggle md:size-6"
+                  className="size-5 text-edenic-blue group-hover:animate-icon-wiggle md:size-6"
                   aria-hidden="true"
                 />
                 {label}
