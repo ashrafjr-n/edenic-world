@@ -58,14 +58,14 @@ export default function Hero() {
             learning is an adventure!
           </p>
 
-          <div className="mt-[48px] flex items-center gap-[37px]">
+          <div className="mt-[36px] flex items-center gap-[37px]">
             <Link
               href="/learn"
-              className="shadow-edenic-cta group inline-flex h-[64px] items-center gap-[14px] rounded-full border border-white/45 bg-gradient-to-b from-[#a067ec] to-[#8449da] px-[48px] text-[clamp(17px,1.35vw,25px)] font-bold text-white transition-transform hover:scale-[1.03] xl:h-[80px]"
+              className="shadow-edenic-cta group inline-flex h-[64px] items-center gap-[14px] rounded-full border-2 border-[#d9a9f6] bg-gradient-to-b from-[#a067ec] to-[#8449da] px-[48px] text-[clamp(17px,1.35vw,25px)] font-bold text-white transition-transform hover:scale-[1.03] xl:h-[80px]"
             >
               Start the Adventure
               <Star
-                className="size-6 fill-edenic-gold text-edenic-gold group-hover:animate-icon-wiggle"
+                className="size-6 fill-edenic-peach text-edenic-peach group-hover:animate-icon-wiggle"
                 aria-hidden="true"
               />
             </Link>
@@ -74,7 +74,7 @@ export default function Hero() {
               href="/watch"
               className="group inline-flex items-center gap-[21px] text-[clamp(15px,1.08vw,20px)] font-semibold text-white"
             >
-              <span className="grid size-[48px] place-items-center rounded-full border border-white/50 transition-colors group-hover:bg-white/15 xl:size-[60px]">
+              <span className="grid size-[48px] place-items-center rounded-full border border-white/55 bg-white/10 transition-colors group-hover:bg-white/20 xl:size-[60px]">
                 <Play
                   className="size-5 translate-x-[1px] fill-white text-white"
                   aria-hidden="true"
