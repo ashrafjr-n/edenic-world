@@ -4,12 +4,16 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  /* Edenic World brand palette */
+  /* Edenic World brand palette — purple family, lightest to darkest */
   --color-edenic-100: #38305a;
-  --color-edenic-200: #2c244c;
-  --color-edenic-300: #292347;
-  --color-edenic-400: #201b38;
+  --color-edenic-200: #1a0d2e;
+  --color-edenic-300: #0d0a1a;
+  --color-edenic-400: #080010;
   --color-edenic-gold: #c9a84c;
+
+  /* Secondary accents — used sparingly */
+  --color-edenic-orange: #e0913f;
+  --color-edenic-blue: #8fd0ec;
 }
 
 @theme inline {
@@ -23,12 +27,38 @@
   --color-edenic-300: var(--color-edenic-300);
   --color-edenic-400: var(--color-edenic-400);
   --color-edenic-gold: var(--color-edenic-gold);
+  --color-edenic-orange: var(--color-edenic-orange);
+  --color-edenic-blue: var(--color-edenic-blue);
+
+  --animate-icon-wiggle: icon-wiggle 0.5s ease-in-out;
 }
 
-/* Light radial background for content pages (Learn/Play/Songs) —
-   a light re-read of the old site's dark Collection/Contact gradient. */
-.bg-edenic-radial-light {
-  background: radial-gradient(ellipse at 50% 0%, #f4eeff 0%, #fbfafd 55%, #ffffff 100%);
+@keyframes icon-wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-14deg);
+  }
+  35% {
+    transform: rotate(12deg);
+  }
+  55% {
+    transform: rotate(-8deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  90% {
+    transform: rotate(-2deg);
+  }
+}
+
+/* Radial background for content pages (Learn/Play/Songs), adapted from
+   the old site's dark Collection/Contact page background. */
+.bg-edenic-radial {
+  background: radial-gradient(ellipse at 50% 0%, #1a0d2e 0%, #0d0a1a 50%, #080010 100%);
 }
 
 @media (prefers-color-scheme: dark) {
