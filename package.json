@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@prisma/client": "^7.9.1",
+    "lucide-react": "^1.33.0",
     "next": "16.3.1",
     "phaser": "^4.2.1",
     "react": "19.2.8",
