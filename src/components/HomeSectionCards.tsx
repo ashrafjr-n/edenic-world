@@ -45,7 +45,7 @@ export default function HomeSectionCards() {
             <li key={href}>
               <Link
                 href={href}
-                className={`shadow-edenic group relative flex h-[280px] flex-col justify-between overflow-hidden rounded-[32px] p-[41px] transition-transform duration-300 hover:-translate-y-1 xl:h-[316px] ${surface}`}
+                className={`shadow-edenic group relative flex h-[280px] flex-col justify-between overflow-hidden rounded-[32px] pt-[39px] pr-[41px] pb-[54px] pl-[45px] transition-transform duration-300 hover:-translate-y-1 xl:h-[316px] ${surface}`}
               >
                 {/* Art bleeds off the right edge and dissolves into the surface. */}
                 <Image
@@ -53,7 +53,7 @@ export default function HomeSectionCards() {
                   alt=""
                   width={600}
                   height={490}
-                  className="card-art-mask pointer-events-none absolute right-[14px] bottom-[26px] h-[83%] w-auto max-w-none object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="card-art-mask pointer-events-none absolute right-[44px] bottom-[24px] h-[85%] w-auto max-w-none object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
                 <div className="relative">
