@@ -53,7 +53,7 @@ export default function HomeSectionCards() {
                   alt=""
                   width={600}
                   height={490}
-                  className="pointer-events-none absolute right-0 bottom-0 h-[87%] w-auto max-w-none object-cover [mask-image:linear-gradient(to_right,transparent_0%,#000_42%)] transition-transform duration-500 group-hover:scale-105"
+                  className="card-art-mask pointer-events-none absolute right-[14px] bottom-[26px] h-[83%] w-auto max-w-none object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
                 <div className="relative">

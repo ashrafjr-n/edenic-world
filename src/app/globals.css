@@ -101,6 +101,19 @@
   background-image: linear-gradient(135deg, #6943ad 0%, #9652d8 100%);
 }
 
+/* Card art dissolves into the card surface on its left and bottom edges, so
+   the illustration reads as part of the gradient rather than pasted on it. */
+.card-art-mask {
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, #000 42%),
+    linear-gradient(to top, transparent 0%, #000 18%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 42%),
+    linear-gradient(to top, transparent 0%, #000 18%);
+  mask-composite: intersect;
+}
+
 /* Atmospheric glow behind the hero characters */
 .bg-hero-glow {
   background-image: radial-gradient(
