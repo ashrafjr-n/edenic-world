@@ -83,6 +83,48 @@
   }
 }
 
+/* ==========================================================================
+   Signature gradients & glows
+   Never render these surfaces flat — the depth is the brand.
+   ========================================================================== */
+
+/* Card surfaces */
+.bg-card-watch {
+  background-image: linear-gradient(135deg, #a4509d 0%, #cd74a3 100%);
+}
+
+.bg-card-learn {
+  background-image: linear-gradient(135deg, #3f49a1 0%, #6943ad 100%);
+}
+
+.bg-card-play {
+  background-image: linear-gradient(135deg, #6943ad 0%, #9652d8 100%);
+}
+
+/* Atmospheric glow behind the hero characters */
+.bg-hero-glow {
+  background-image: radial-gradient(
+    circle at 70% 45%,
+    rgba(239, 156, 153, 0.55) 0%,
+    rgba(174, 132, 204, 0.35) 30%,
+    transparent 65%
+  );
+}
+
+/* Elevation */
+.shadow-edenic {
+  box-shadow:
+    0 0 30px rgba(150, 82, 216, 0.25),
+    0 10px 40px rgba(38, 29, 82, 0.35);
+}
+
+.shadow-edenic-cta {
+  box-shadow:
+    0 0 20px rgba(150, 82, 216, 0.65),
+    0 0 60px rgba(150, 82, 216, 0.45),
+    0 10px 40px rgba(38, 29, 82, 0.35);
+}
+
 html {
   background: var(--color-edenic-bg);
 }
