@@ -45,7 +45,7 @@ export default function HomeSectionCards() {
             <li key={href}>
               <Link
                 href={href}
-                className={`shadow-edenic group relative flex h-[280px] flex-col justify-between overflow-hidden rounded-[32px] p-[44px] transition-transform duration-300 hover:-translate-y-1 xl:h-[316px] ${surface}`}
+                className={`shadow-edenic group relative flex h-[280px] flex-col justify-between overflow-hidden rounded-[32px] p-[41px] transition-transform duration-300 hover:-translate-y-1 xl:h-[316px] ${surface}`}
               >
                 {/* Art bleeds off the right edge and dissolves into the surface. */}
                 <Image
@@ -53,14 +53,14 @@ export default function HomeSectionCards() {
                   alt=""
                   width={600}
                   height={490}
-                  className="pointer-events-none absolute top-0 right-0 h-full w-auto max-w-none object-cover [mask-image:linear-gradient(to_right,transparent_0%,#000_42%)] transition-transform duration-500 group-hover:scale-105"
+                  className="pointer-events-none absolute right-0 bottom-0 h-[87%] w-auto max-w-none object-cover [mask-image:linear-gradient(to_right,transparent_0%,#000_42%)] transition-transform duration-500 group-hover:scale-105"
                 />
 
                 <div className="relative">
                   <h2 className="font-display text-[clamp(30px,2.54vw,47px)] leading-[1.1] font-extrabold text-white">
                     {title}
                   </h2>
-                  <p className="mt-[18px] max-w-[272px] text-[clamp(16px,1.15vw,21px)] leading-[1.43] font-medium text-white/90">
+                  <p className="mt-[12px] max-w-[272px] text-[clamp(15px,1.06vw,19.6px)] leading-[1.38] font-medium text-white/90">
                     {description}
                   </p>
                 </div>
