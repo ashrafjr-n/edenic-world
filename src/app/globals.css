@@ -9,6 +9,7 @@
   --color-edenic-200: #2c244c;
   --color-edenic-300: #292347;
   --color-edenic-400: #201b38;
+  --color-edenic-gold: #c9a84c;
 }
 
 @theme inline {
@@ -21,6 +22,13 @@
   --color-edenic-200: var(--color-edenic-200);
   --color-edenic-300: var(--color-edenic-300);
   --color-edenic-400: var(--color-edenic-400);
+  --color-edenic-gold: var(--color-edenic-gold);
+}
+
+/* Light radial background for content pages (Learn/Play/Songs) —
+   a light re-read of the old site's dark Collection/Contact gradient. */
+.bg-edenic-radial-light {
+  background: radial-gradient(ellipse at 50% 0%, #f4eeff 0%, #fbfafd 55%, #ffffff 100%);
 }
 
 @media (prefers-color-scheme: dark) {

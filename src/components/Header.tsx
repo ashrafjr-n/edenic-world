@@ -10,7 +10,7 @@ const NAV_LINKS = [
 
 export default function Header() {
   return (
-    <header className="absolute inset-x-0 top-0 z-20 flex items-center justify-between bg-gradient-to-b from-edenic-100 via-edenic-200 to-edenic-400 px-6 py-3 shadow-lg md:px-10 md:py-4">
+    <header className="absolute inset-x-0 top-0 z-20 flex items-center justify-between border-b border-white/40 bg-white/55 px-6 py-3 shadow-[0_8px_32px_rgba(32,27,56,0.10)] backdrop-blur-xl md:px-10 md:py-4">
       <Link href="/" className="shrink-0">
         <Image
           src="/images/edenic-logo.png"
@@ -28,10 +28,15 @@ export default function Header() {
             <li key={href}>
               <Link
                 href={href}
-                className="flex items-center gap-2 text-sm font-semibold tracking-wide text-white transition-opacity hover:opacity-75 md:text-base"
+                className="group flex items-center gap-2 text-sm font-semibold tracking-wide text-edenic-400 md:text-base"
               >
-                <Icon className="size-5 md:size-6" aria-hidden="true" />
-                {label}
+                <Icon
+                  className="size-5 text-edenic-gold transition-[filter] duration-200 group-hover:drop-shadow-[0_0_8px_rgba(201,168,76,0.7)] md:size-6"
+                  aria-hidden="true"
+                />
+                <span className="transition-colors duration-200 group-hover:text-edenic-gold">
+                  {label}
+                </span>
               </Link>
             </li>
           ))}
