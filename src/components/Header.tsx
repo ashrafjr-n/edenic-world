@@ -10,7 +10,7 @@ const NAV_LINKS = [
 
 export default function Header() {
   return (
-    <header className="absolute inset-x-0 top-0 z-20 flex items-center justify-between border-b border-white/10 bg-gradient-to-b from-edenic-200/85 via-edenic-300/85 to-edenic-400/90 px-6 py-3 shadow-[0_8px_32px_rgba(8,0,16,0.35)] backdrop-blur-xl md:px-10 md:py-4">
+    <header className="absolute inset-x-0 top-0 z-20 flex items-center justify-between border-b border-white/10 bg-edenic-header px-6 py-3 shadow-[0_8px_32px_rgba(8,0,16,0.35)] md:px-10 md:py-4">
       <Link href="/" className="shrink-0">
         <Image
           src="/images/edenic-logo.png"
