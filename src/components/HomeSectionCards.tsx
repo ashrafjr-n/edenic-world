@@ -64,7 +64,7 @@ export default function HomeSectionCards() {
                   <h2 className="font-display text-[clamp(24px,min(2.16vw,3.25vh),40px)] leading-[1.1] font-extrabold text-white">
                     {title}
                   </h2>
-                  <p className="mt-[9px] max-w-[228px] text-[clamp(13px,min(0.95vw,1.42vh),17.5px)] leading-[1.38] font-medium text-white/90">
+                  <p className="mt-[9px] max-w-[13em] text-[clamp(13px,min(0.95vw,1.42vh),17.5px)] leading-[1.38] font-medium text-white/90">
                     {description}
                   </p>
                 </div>

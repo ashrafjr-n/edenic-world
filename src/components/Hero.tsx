@@ -56,7 +56,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-[12px] max-w-[350px] text-[clamp(15px,min(1.32vw,1.98vh),24.5px)] leading-[1.25] font-medium text-white">
+          <p className="mt-[12px] max-w-[14.3em] text-[clamp(15px,min(1.32vw,1.98vh),24.5px)] leading-[1.25] font-medium text-white">
             Step into a magical world with{" "}
             <span className="font-bold text-edenic-nova">Nova</span>,{" "}
             <span className="font-bold text-edenic-pinki">Pinki</span> &{" "}
