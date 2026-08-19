@@ -58,10 +58,10 @@ export default function Hero() {
             learning is an adventure!
           </p>
 
-          <div className="mt-[36px] flex items-center gap-[37px]">
+          <div className="mt-[39px] flex items-center gap-[37px]">
             <Link
               href="/learn"
-              className="shadow-edenic-cta group inline-flex h-[64px] items-center gap-[14px] rounded-full border-2 border-[#d9a9f6] bg-gradient-to-b from-[#a067ec] to-[#8449da] px-[48px] text-[clamp(17px,1.35vw,25px)] font-bold text-white transition-transform hover:scale-[1.03] xl:h-[80px]"
+              className="shadow-edenic-cta group inline-flex h-[64px] items-center gap-[14px] rounded-full border-2 border-[#d9a9f6] bg-gradient-to-b from-[#a067ec] to-[#8449da] px-[48px] text-[clamp(17px,1.32vw,24.4px)] font-bold text-white transition-transform hover:scale-[1.03] xl:h-[80px]"
             >
               Start the Adventure
               <Star
