@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Edenic World brand palette */
+  --color-edenic-100: #38305a;
+  --color-edenic-200: #2c244c;
+  --color-edenic-300: #292347;
+  --color-edenic-400: #201b38;
 }
 
 @theme inline {
@@ -10,6 +16,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-edenic-100: var(--color-edenic-100);
+  --color-edenic-200: var(--color-edenic-200);
+  --color-edenic-300: var(--color-edenic-300);
+  --color-edenic-400: var(--color-edenic-400);
 }
 
 @media (prefers-color-scheme: dark) {
