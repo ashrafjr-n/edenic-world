@@ -38,14 +38,14 @@ const CARDS: SectionCard[] = [
 
 export default function HomeSectionCards() {
   return (
-    <section className="relative z-10 -mt-[52px] pb-[40px]">
+    <section className="relative z-10 -mt-[3vh] pb-[5vh]">
       <Container>
-        <ul className="grid gap-[32px] md:grid-cols-3">
+        <ul className="grid gap-[26px] md:grid-cols-3">
           {CARDS.map(({ title, description, href, image, surface }) => (
             <li key={href}>
               <Link
                 href={href}
-                className={`shadow-edenic group relative flex h-[280px] flex-col justify-between overflow-hidden rounded-[32px] pt-[39px] pr-[41px] pb-[54px] pl-[45px] transition-transform duration-300 hover:-translate-y-1 xl:h-[316px] ${surface}`}
+                className={`shadow-edenic group relative flex h-[clamp(200px,24vh,290px)] flex-col justify-between overflow-hidden rounded-[28px] pt-[clamp(20px,3vh,34px)] pr-[32px] pb-[clamp(24px,3.6vh,42px)] pl-[clamp(24px,2.1vw,38px)] transition-transform duration-300 hover:-translate-y-1 ${surface}`}
               >
                 {/* Art bleeds off the right edge and dissolves into the surface. */}
                 <Image
@@ -53,7 +53,7 @@ export default function HomeSectionCards() {
                   alt=""
                   width={600}
                   height={490}
-                  className="card-art-mask pointer-events-none absolute right-[10px] bottom-[22px] h-[88%] w-auto max-w-none object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="card-art-mask pointer-events-none absolute right-0 bottom-0 h-[96%] w-auto max-w-none object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
                 {/* Grounds the card — the surface settles into the page colour
@@ -61,16 +61,16 @@ export default function HomeSectionCards() {
                 <span className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent from-35% to-edenic-bg/30" />
 
                 <div className="relative">
-                  <h2 className="font-display text-[clamp(30px,2.54vw,47px)] leading-[1.1] font-extrabold text-white">
+                  <h2 className="font-display text-[clamp(24px,min(2.16vw,3.25vh),40px)] leading-[1.1] font-extrabold text-white">
                     {title}
                   </h2>
-                  <p className="mt-[12px] max-w-[258px] text-[clamp(15px,1.06vw,19.6px)] leading-[1.38] font-medium text-white/90">
+                  <p className="mt-[9px] max-w-[228px] text-[clamp(13px,min(0.95vw,1.42vh),17.5px)] leading-[1.38] font-medium text-white/90">
                     {description}
                   </p>
                 </div>
 
-                <span className="relative grid size-[56px] place-items-center rounded-full bg-white/15 text-white ring-1 ring-white/20 backdrop-blur-sm transition-colors group-hover:bg-white/25 xl:size-[70px]">
-                  <ArrowRight className="size-6" strokeWidth={2.5} aria-hidden="true" />
+                <span className="relative grid size-[clamp(40px,5.2vh,58px)] place-items-center rounded-full bg-white/15 text-white ring-1 ring-white/20 backdrop-blur-sm transition-colors group-hover:bg-white/25">
+                  <ArrowRight className="size-5" strokeWidth={2.5} aria-hidden="true" />
                 </span>
               </Link>
             </li>
