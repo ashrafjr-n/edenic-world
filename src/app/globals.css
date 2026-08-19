@@ -1,38 +1,62 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   Edenic World — brand identity
+   Premium 3D fantasy kids brand. Deep dreamy purple/indigo base, pastel
+   accents, atmospheric glows, luminous CTAs. The dark purple is the anchor;
+   saturated colour only ever appears on characters, cards, buttons and art.
+   ========================================================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --- Core palette --------------------------------------------------- */
+  --color-edenic-bg: #261d52; /* main background — the anchor colour */
+  --color-edenic-deep: #1e2c6f; /* deep background, top of the page gradient */
+  --color-edenic-deep-purple: #473672;
+  --color-edenic-purple: #6943ad;
+  --color-edenic-bright-purple: #9652d8;
+  --color-edenic-blue: #3f49a1;
+  --color-edenic-bright-blue: #4476be;
+  --color-edenic-pink: #a4509d;
+  --color-edenic-bright-pink: #cd74a3;
+  --color-edenic-soft-pink: #dfa0cd;
+  --color-edenic-peach: #f8c7bd;
+  --color-edenic-coral: #ef9c99;
+  --color-edenic-lavender: #ae84cc;
+  --color-edenic-soft-lavender: #7973b6;
+  --color-edenic-gold: #ce924f;
+  --color-edenic-cyan: #78c5dc;
+  --color-edenic-white: #f6f0f3;
 
-  /* Edenic World brand palette — purple family, lightest to darkest */
-  --color-edenic-100: #38305a;
-  --color-edenic-200: #1a0d2e;
-  --color-edenic-300: #0d0a1a;
-  --color-edenic-400: #080010;
-  --color-edenic-gold: #c9a84c;
-
-  /* Secondary accents — used sparingly */
-  --color-edenic-orange: #e0913f;
-  --color-edenic-blue: #8fd0ec;
-
-  /* Header background — sampled exactly from reference screenshot */
-  --color-edenic-header: #1a1329;
+  /* --- Character accents (used in copy to name the characters) -------- */
+  --color-edenic-nova: #8fe0f5;
+  --color-edenic-pinki: #e790c4;
+  --color-edenic-bloo: #8fd7f5;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-baloo);
+  --font-sans: var(--font-nunito);
 
-  --color-edenic-100: var(--color-edenic-100);
-  --color-edenic-200: var(--color-edenic-200);
-  --color-edenic-300: var(--color-edenic-300);
-  --color-edenic-400: var(--color-edenic-400);
-  --color-edenic-gold: var(--color-edenic-gold);
-  --color-edenic-orange: var(--color-edenic-orange);
+  --color-edenic-bg: var(--color-edenic-bg);
+  --color-edenic-deep: var(--color-edenic-deep);
+  --color-edenic-deep-purple: var(--color-edenic-deep-purple);
+  --color-edenic-purple: var(--color-edenic-purple);
+  --color-edenic-bright-purple: var(--color-edenic-bright-purple);
   --color-edenic-blue: var(--color-edenic-blue);
-  --color-edenic-header: var(--color-edenic-header);
+  --color-edenic-bright-blue: var(--color-edenic-bright-blue);
+  --color-edenic-pink: var(--color-edenic-pink);
+  --color-edenic-bright-pink: var(--color-edenic-bright-pink);
+  --color-edenic-soft-pink: var(--color-edenic-soft-pink);
+  --color-edenic-peach: var(--color-edenic-peach);
+  --color-edenic-coral: var(--color-edenic-coral);
+  --color-edenic-lavender: var(--color-edenic-lavender);
+  --color-edenic-soft-lavender: var(--color-edenic-soft-lavender);
+  --color-edenic-gold: var(--color-edenic-gold);
+  --color-edenic-cyan: var(--color-edenic-cyan);
+  --color-edenic-white: var(--color-edenic-white);
+  --color-edenic-nova: var(--color-edenic-nova);
+  --color-edenic-pinki: var(--color-edenic-pinki);
+  --color-edenic-bloo: var(--color-edenic-bloo);
 
   --animate-icon-wiggle: icon-wiggle 0.5s ease-in-out;
 }
@@ -59,21 +83,17 @@
   }
 }
 
-/* Radial background for content pages (Learn/Play/Songs), adapted from
-   the old site's dark Collection/Contact page background. */
-.bg-edenic-radial {
-  background: radial-gradient(ellipse at 50% 0%, #1a0d2e 0%, #0d0a1a 50%, #080010 100%);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-edenic-bg);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    180deg,
+    var(--color-edenic-deep) 0%,
+    var(--color-edenic-bg) 45%,
+    var(--color-edenic-bg) 100%
+  );
+  color: var(--color-edenic-white);
+  font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
 }
