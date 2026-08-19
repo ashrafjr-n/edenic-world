@@ -29,11 +29,15 @@ export default function Hero() {
         className="absolute inset-x-0 bottom-[45px] w-full [mask-image:linear-gradient(to_bottom,transparent_0,#000_90px)]"
       />
 
+      {/* Deep night sky over the extended top, so the header sits on colour
+          rather than on the washed-out blur. */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[52%] bg-gradient-to-b from-edenic-deep/90 via-edenic-deep/40 to-transparent" />
+
       {/* Atmospheric glow that lifts the characters out of the scene. */}
-      <div className="pointer-events-none absolute inset-0 bg-hero-glow mix-blend-screen opacity-60" />
+      <div className="pointer-events-none absolute inset-0 bg-hero-glow opacity-35" />
 
       {/* Keeps the copy readable without flattening the art behind it. */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-edenic-bg/45 via-edenic-bg/5 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-edenic-bg/50 via-edenic-bg/10 to-edenic-bg/15" />
 
       <Container className="relative z-20 flex h-full flex-col justify-start pt-[16vw] xl:pt-[281px]">
         <div className="max-w-[760px] xl:pl-[44px]">
