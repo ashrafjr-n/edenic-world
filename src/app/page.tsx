@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import HomeSectionCards from "@/components/HomeSectionCards";
+import Hero from "@/features/home/Hero";
+import HomeSectionCards from "@/features/home/HomeSectionCards";
 
 export default function Home() {
   return (

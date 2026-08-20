@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Play, Star } from "lucide-react";
 import Container from "@/components/Container";
-import HeroCurve from "@/components/HeroCurve";
+import HeroCurve from "@/features/home/HeroCurve";
 
 /**
  * Hero and the three section cards below it are sized to land inside a single

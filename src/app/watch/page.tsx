@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import WatchHero from "@/components/WatchHero";
-import FeaturedVideo from "@/components/FeaturedVideo";
-import VideoLibrary from "@/components/VideoLibrary";
-import SubscribeBanner from "@/components/SubscribeBanner";
+import WatchHero from "@/features/watch/WatchHero";
+import FeaturedVideo from "@/features/watch/FeaturedVideo";
+import VideoLibrary from "@/features/watch/VideoLibrary";
+import SubscribeBanner from "@/features/watch/SubscribeBanner";
 import Container from "@/components/Container";
 import { FEATURED_VIDEO, VIDEOS, VIDEO_FILTERS } from "@/data/videos";
 
