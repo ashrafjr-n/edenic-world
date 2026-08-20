@@ -166,6 +166,19 @@
     0 10px 40px rgba(38, 29, 82, 0.35);
 }
 
+/* Drop shadows for text/icons sitting over busy hero artwork. */
+.drop-shadow-edenic-heading {
+  filter: drop-shadow(0 6px 24px rgba(38, 29, 82, 0.45));
+}
+
+.drop-shadow-edenic-gold {
+  filter: drop-shadow(0 2px 10px rgba(206, 146, 79, 0.5));
+}
+
+.drop-shadow-edenic-deep {
+  filter: drop-shadow(0 2px 10px rgba(38, 29, 82, 0.4));
+}
+
 html {
   background: var(--color-edenic-bg);
 }
