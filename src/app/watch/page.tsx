@@ -16,9 +16,8 @@ export default function WatchPage() {
   return (
     <main className="relative w-full">
       <Header activeHref="/watch" />
-      <WatchHero />
 
-      <div className="bg-edenic-bg relative z-10 -mt-[4vh] pb-[7vh]">
+      <div className="bg-edenic-bg relative z-10 pt-[clamp(96px,15vh,168px)] pb-[7vh]">
         <Container className="flex flex-col gap-[5vh]">
           <div className="shadow-edenic rounded-[32px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(22px,3.6vw,48px)]">
             <FeaturedVideo video={getFeaturedVideo()} />
@@ -31,6 +30,8 @@ export default function WatchPage() {
           <SubscribeBanner />
         </Container>
       </div>
+
+      <WatchHero />
     </main>
   );
 }
