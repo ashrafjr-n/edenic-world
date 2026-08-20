@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { Music2, Sparkles, Star } from "lucide-react";
 import Container from "@/components/Container";
-import HeroCurve from "@/components/HeroCurve";
 
 /**
  * Same treatment as the Home hero (Hero.tsx): the artwork is laid in along
  * the bottom at full width, with a blurred copy of itself extending the sky
- * above it so the landscape stays uncropped at any hero height.
+ * above it so the landscape stays uncropped at any hero height. Unlike the
+ * Home hero, the bottom edge is a plain gradient fade into `edenic-bg`
+ * rather than the wave shape — no dividing line at all, curved or straight.
  */
 export default function WatchHero() {
   return (
@@ -27,12 +28,13 @@ export default function WatchHero() {
         height={608}
         priority
         sizes="100vw"
-        className="absolute inset-x-0 bottom-[70px] w-full [mask-image:linear-gradient(to_bottom,transparent_0,#000_90px)]"
+        className="absolute inset-x-0 bottom-0 w-full [mask-image:linear-gradient(to_bottom,transparent_0,#000_90px)]"
       />
 
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[46%] bg-gradient-to-b from-edenic-deep/95 via-edenic-deep/30 to-transparent" />
       <div className="pointer-events-none absolute inset-0 bg-hero-glow opacity-35" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-edenic-bg/62 via-edenic-bg/12 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[38%] bg-gradient-to-b from-transparent to-edenic-bg" />
 
       {/* Decorative stars & notes, scattered across the top band above the characters. */}
       <Star
@@ -53,26 +55,22 @@ export default function WatchHero() {
       />
 
       <Container className="relative z-20 flex h-full flex-col justify-center">
-        <div className="max-w-[620px] xl:pl-[44px]">
-          <h1 className="font-display font-bold tracking-[-0.005em] drop-shadow-[0_6px_24px_rgba(38,29,82,0.45)]">
-            <span className="block text-[clamp(38px,min(4.6vw,6.9vh),74px)] leading-[1.0] text-white">
-              Watch
-            </span>
-            <span className="text-imagine-gradient -mt-[0.06em] block w-fit text-[clamp(38px,min(4.6vw,6.9vh),74px)] leading-[1.0]">
-              &amp; Enjoy
-            </span>
+        <div className="max-w-[700px] xl:pl-[44px]">
+          <h1 className="font-display text-[clamp(36px,min(5vw,7.4vh),80px)] leading-[1.05] font-bold tracking-[-0.005em] drop-shadow-[0_6px_24px_rgba(38,29,82,0.45)]">
+            <span className="text-white">Watch </span>
+            <span className="text-imagine-gradient">&amp; Enjoy</span>
           </h1>
 
-          <p className="mt-[14px] max-w-[16.5em] text-[clamp(15px,min(1.32vw,1.98vh),22px)] leading-[1.3] font-medium text-white">
-            Sing, dance and learn with{" "}
-            <span className="font-bold text-edenic-nova">Nova</span>,{" "}
-            <span className="font-bold text-edenic-pinki">Pinki</span> &{" "}
-            <span className="font-bold text-edenic-bloo">Bloo</span>!
+          <p className="mt-[16px] text-[clamp(17px,min(1.6vw,2.4vh),26px)] leading-[1.35] font-medium text-white">
+            <span className="block">Sing, dance and learn with</span>
+            <span className="block">
+              <span className="font-bold text-edenic-nova">Nova</span>,{" "}
+              <span className="font-bold text-edenic-pinki">Pinki</span> &{" "}
+              <span className="font-bold text-edenic-bloo">Bloo</span>!
+            </span>
           </p>
         </div>
       </Container>
-
-      <HeroCurve />
     </section>
   );
 }
