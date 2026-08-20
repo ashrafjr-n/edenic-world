@@ -15,10 +15,12 @@ export default function SubscribeBanner() {
         aria-hidden="true"
         width={600}
         height={490}
-        className="card-art-mask pointer-events-none absolute right-0 bottom-0 h-[clamp(110px,20vh,170px)] w-auto max-w-none object-cover"
+        className="card-art-mask pointer-events-none absolute right-0 bottom-0 h-[clamp(90px,16vh,140px)] w-auto max-w-none object-cover"
       />
 
-      <div className="relative flex flex-col items-start gap-[16px] sm:flex-row sm:items-center sm:gap-[28px]">
+      {/* Two equal outer tracks keep the button dead-centre in the card
+          regardless of how wide the text block is. */}
+      <div className="relative grid grid-cols-1 gap-[16px] sm:grid-cols-[1fr_auto_1fr] sm:items-center sm:gap-[28px]">
         <div>
           <h2 className="font-display text-[22px] font-bold text-white sm:text-[26px]">
             New videos every week!
