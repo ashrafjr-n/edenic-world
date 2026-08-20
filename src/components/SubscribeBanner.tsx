@@ -4,8 +4,8 @@ import { Bell } from "lucide-react";
 
 export default function SubscribeBanner() {
   return (
-    <div className="shadow-edenic relative overflow-hidden rounded-[28px] bg-gradient-to-r from-edenic-deep-purple via-edenic-purple to-edenic-bright-purple px-[clamp(24px,4vw,48px)] py-[clamp(24px,3.6vh,38px)]">
-      <div className="pointer-events-none absolute inset-0 bg-hero-glow opacity-25" />
+    <div className="bg-card-watch shadow-edenic relative overflow-hidden rounded-[28px] px-[clamp(24px,4vw,48px)] py-[clamp(24px,3.6vh,38px)]">
+      <span className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent from-35% to-edenic-bg/30" />
 
       <div className="relative flex flex-col items-center gap-[22px] text-center sm:flex-row sm:text-left">
         <span className="relative size-[84px] shrink-0 overflow-hidden rounded-[22px] ring-1 ring-white/25 sm:size-[96px]">
