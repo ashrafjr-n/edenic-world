@@ -23,6 +23,9 @@ type ButtonProps = {
   external?: boolean;
   onClick?: () => void;
   type?: "button" | "submit";
+  /** Required for an icon-only button — there's no visible text for a
+   *  screen reader to announce otherwise. */
+  ariaLabel?: string;
 };
 
 export default function Button({
@@ -32,6 +35,7 @@ export default function Button({
   external = false,
   onClick,
   type = "button",
+  ariaLabel,
 }: ButtonProps) {
   const classes = `${CTA_CLASSES} ${className}`;
 
@@ -39,6 +43,7 @@ export default function Button({
     return (
       <Link
         href={href}
+        aria-label={ariaLabel}
         className={classes}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
@@ -48,7 +53,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} aria-label={ariaLabel} className={classes}>
       {children}
     </button>
   );
