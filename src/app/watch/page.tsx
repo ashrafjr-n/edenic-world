@@ -19,7 +19,7 @@ export default function WatchPage() {
 
       <div className="relative z-10 -mt-[4vh] pb-[7vh]">
         <Container className="flex flex-col gap-[5vh]">
-          <div className="shadow-edenic rounded-[32px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(22px,3.6vw,48px)] backdrop-blur-md">
+          <div className="shadow-edenic rounded-[32px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(22px,3.6vw,48px)]">
             <FeaturedVideo />
 
             <div className="my-[clamp(28px,4.2vh,44px)] h-px w-full bg-white/10" />
