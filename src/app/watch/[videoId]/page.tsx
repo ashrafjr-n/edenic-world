@@ -57,13 +57,15 @@ export default async function VideoPage(props: PageProps<"/watch/[videoId]">) {
         </Link>
 
         <div className="shadow-edenic relative overflow-hidden rounded-[36px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(22px,3.6vw,48px)]">
-          {/* Whimsical accents scattered over the panel, echoing the Watch hero. */}
+          {/* A small sparkle flourish in the corner, echoing the Watch hero —
+              clustered together so it reads as one accent, not stray dots
+              floating in the empty space below the info column. */}
           <Sparkles
-            className="pointer-events-none absolute top-[7%] right-[7%] size-6 text-edenic-cyan opacity-60"
+            className="pointer-events-none absolute top-[6%] right-[7%] size-6 text-edenic-cyan opacity-60"
             aria-hidden="true"
           />
           <Star
-            className="pointer-events-none absolute right-[13%] bottom-[9%] size-[18px] fill-edenic-gold text-edenic-gold opacity-70"
+            className="pointer-events-none absolute top-[11.5%] right-[4%] size-[14px] fill-edenic-gold text-edenic-gold opacity-70"
             aria-hidden="true"
           />
 
