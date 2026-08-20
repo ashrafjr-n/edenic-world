@@ -66,6 +66,7 @@ export function getVideos(): Video[] {
 }
 
 export function getVideoById(videoId: Id): Video | undefined {
+  if (FEATURED_VIDEO.id === videoId) return FEATURED_VIDEO;
   return VIDEOS.find((video) => video.id === videoId);
 }
 
@@ -75,4 +76,22 @@ export function getFeaturedVideo(): Video {
 
 export function getVideoFilters(): VideoFilter[] {
   return VIDEO_FILTERS;
+}
+
+/**
+ * Videos to suggest after `video` — same topic first (so a Learn-linked video
+ * stays inside its topic), falling back to same category. Never includes
+ * `video` itself.
+ */
+export function getRelatedVideos(video: Video, limit = 6): Video[] {
+  const others = VIDEOS.filter((candidate) => candidate.id !== video.id);
+
+  const sameTopic = video.topicId
+    ? others.filter((candidate) => candidate.topicId === video.topicId)
+    : [];
+  const sameCategory = others.filter(
+    (candidate) => candidate.category === video.category && !sameTopic.includes(candidate),
+  );
+
+  return [...sameTopic, ...sameCategory].slice(0, limit);
 }
