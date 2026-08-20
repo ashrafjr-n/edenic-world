@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, BookOpen, Gamepad2, Sparkles, Star } from "lucide-react";
 import Header from "@/components/Header";
 import Container from "@/components/Container";
 import SectionHeader from "@/components/SectionHeader";
+import Button from "@/components/Button";
 import VideoGrid from "@/components/VideoGrid";
 import { CATEGORY_ICON } from "@/components/VideoCard";
 import VideoPlayer from "@/features/watch/VideoPlayer";
@@ -38,25 +38,20 @@ export default async function VideoPage(props: PageProps<"/watch/[videoId]">) {
     <main className="relative min-h-screen w-full overflow-hidden bg-edenic-bg pt-[clamp(90px,14vh,160px)] pb-[9vh]">
       <Header activeHref="/watch" />
 
-      {/* Atmospheric glow behind the player panel, same family as the hero glow. */}
-      <div
-        aria-hidden="true"
-        className="bg-hero-glow pointer-events-none absolute inset-x-0 top-[6vh] h-[55vh] opacity-25"
-      />
-
       <Container className="relative z-10 flex flex-col gap-[6vh]">
-        <Link
-          href="/watch"
-          className="group inline-flex w-fit items-center gap-[10px] text-[15px] font-semibold text-white/70 transition-colors hover:text-white"
-        >
+        <Button href="/watch" ariaLabel="Back to All Videos" className="size-[52px] justify-center p-0">
           <ArrowLeft
-            className="size-4 transition-transform duration-300 group-hover:-translate-x-1"
+            className="size-5 transition-transform duration-300 group-hover:-translate-x-0.5"
             aria-hidden="true"
           />
-          Back to All Videos
-        </Link>
+        </Button>
 
         <div className="shadow-edenic relative overflow-hidden rounded-[36px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(22px,3.6vw,48px)]">
+          {/* Atmospheric glow, clipped to the panel's own rounded edge so it
+              never shows a hard rectangular seam against the flat page
+              background the way a free-floating glow div would. */}
+          <div aria-hidden="true" className="bg-hero-glow pointer-events-none absolute inset-0 opacity-30" />
+
           {/* A small sparkle flourish in the corner, echoing the Watch hero —
               clustered together so it reads as one accent, not stray dots
               floating in the empty space below the info column. */}
