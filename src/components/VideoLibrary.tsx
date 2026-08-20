@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ChevronDown, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import { VIDEOS } from "@/lib/videos";
 import VideoFilters, { type VideoFilterValue } from "@/components/VideoFilters";
 import VideoGrid from "@/components/VideoGrid";
@@ -26,18 +26,8 @@ export default function VideoLibrary() {
         <Star className="size-[19px] fill-edenic-gold text-edenic-gold" aria-hidden="true" />
       </h2>
 
-      <div className="mt-[20px] flex flex-col gap-[14px] sm:flex-row sm:items-center sm:justify-between">
-        <div className="-mx-[clamp(22px,3.6vw,48px)] overflow-x-auto px-[clamp(22px,3.6vw,48px)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <VideoFilters active={active} onChange={setActive} />
-        </div>
-
-        <button
-          type="button"
-          className="flex shrink-0 items-center gap-[8px] self-start rounded-full border border-white/20 px-[18px] py-[9px] text-[14px] font-semibold text-white/85 transition-colors hover:bg-white/10 sm:self-auto"
-        >
-          Newest
-          <ChevronDown className="size-4" aria-hidden="true" />
-        </button>
+      <div className="mt-[20px] -mx-[clamp(22px,3.6vw,48px)] overflow-x-auto px-[clamp(22px,3.6vw,48px)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <VideoFilters active={active} onChange={setActive} />
       </div>
 
       <div className="mt-[30px]">
