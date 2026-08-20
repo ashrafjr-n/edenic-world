@@ -80,11 +80,12 @@ export function getVideoFilters(): VideoFilter[] {
 
 /**
  * Videos to suggest after `video` — same topic first (so a Learn-linked video
- * stays inside its topic), falling back to same category. Never includes
- * `video` itself.
+ * stays inside its topic), then same category, then anything else watchable.
+ * Only ever suggests videos with a `youtubeId`: a suggestion the visitor
+ * can't actually click into is a dead end. Never includes `video` itself.
  */
-export function getRelatedVideos(video: Video, limit = 6): Video[] {
-  const others = VIDEOS.filter((candidate) => candidate.id !== video.id);
+export function getRelatedVideos(video: Video, limit = 3): Video[] {
+  const others = VIDEOS.filter((candidate) => candidate.id !== video.id && candidate.youtubeId);
 
   const sameTopic = video.topicId
     ? others.filter((candidate) => candidate.topicId === video.topicId)
@@ -92,6 +93,9 @@ export function getRelatedVideos(video: Video, limit = 6): Video[] {
   const sameCategory = others.filter(
     (candidate) => candidate.category === video.category && !sameTopic.includes(candidate),
   );
+  const rest = others.filter(
+    (candidate) => !sameTopic.includes(candidate) && !sameCategory.includes(candidate),
+  );
 
-  return [...sameTopic, ...sameCategory].slice(0, limit);
+  return [...sameTopic, ...sameCategory, ...rest].slice(0, limit);
 }
