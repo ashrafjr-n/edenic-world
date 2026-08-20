@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Play, Star } from "lucide-react";
 import { FEATURED_VIDEO } from "@/lib/videos";
+
+const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@EdenicWorld-kids";
 
 export default function FeaturedVideo() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -69,14 +72,15 @@ export default function FeaturedVideo() {
           <p className="mt-[10px] text-[16px] font-medium text-white/80">
             {FEATURED_VIDEO.description}
           </p>
-          <button
-            type="button"
-            onClick={play}
+          <Link
+            href={YOUTUBE_CHANNEL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="shadow-edenic-cta mt-[24px] inline-flex h-[54px] items-center gap-[10px] rounded-full border-2 border-[#d9a9f6] bg-gradient-to-b from-[#a067ec] to-[#8449da] px-[30px] text-[16px] font-bold text-white transition-transform hover:scale-[1.03]"
           >
             <Play className="size-4 fill-white text-white" aria-hidden="true" />
             Watch Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>
