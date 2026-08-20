@@ -2,16 +2,34 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 /**
- * The luminous Edenic CTA. Owns only the identity of the button — surface,
- * border, glow, hover — and deliberately no size: callers pass height, padding,
- * gap and type scale through `className`, because the hero's CTA is fluid
- * (`clamp`) while in-card CTAs are fixed.
+ * The Edenic liquid-glass CTA: a frosted pill floating over four colour
+ * blobs, refracted through `backdrop-filter` and swapping hue on hover.
+ * Owns only the identity of the button — surface, blobs, glow, hover —
+ * deliberately no size: callers pass height, padding, gap and type scale
+ * via `className`, because the hero's CTA is fluid (`clamp`) while in-card
+ * CTAs are fixed. `className` lands on the inner glass surface (not the
+ * outer element) so the outer keeps shrink-wrapping to it and the blobs'
+ * percentage positions stay correct for any size, from an icon-only square
+ * to the wide hero CTA.
  *
  * `group` is always present so a caller can wiggle its icon on hover with
  * `group-hover:animate-icon-wiggle`, per the project's icon-only hover rule.
  */
-const CTA_CLASSES =
-  "shadow-edenic-cta group inline-flex items-center rounded-full border-2 border-edenic-cta-border bg-gradient-to-b from-edenic-cta-from to-edenic-cta-to font-bold text-white transition-transform hover:scale-[1.03]";
+const OUTER_CLASSES =
+  "group relative isolate inline-flex cursor-pointer overflow-hidden rounded-full border-2 border-transparent text-white shadow-edenic-cta transition-transform hover:scale-[1.03] active:border-white";
+
+const GLASS_CLASSES =
+  "bg-button-glass relative z-[1] inline-flex items-center rounded-full font-bold backdrop-blur-[10px]";
+
+const BLOB_BASE =
+  "pointer-events-none absolute -z-10 h-full w-[62%] rounded-full transition-[background-color,transform] duration-300 ease-in-out group-hover:scale-125";
+
+const BLOBS = [
+  { position: "top-0 left-0", color: "bg-edenic-blob-orange group-hover:bg-edenic-blob-blue" },
+  { position: "top-0 left-[22%]", color: "bg-edenic-blob-purple group-hover:bg-edenic-blob-pink" },
+  { position: "-top-[33%] left-[50%]", color: "bg-edenic-blob-pink group-hover:bg-edenic-blob-purple" },
+  { position: "top-[53%] left-[54%]", color: "bg-edenic-blob-blue group-hover:bg-edenic-blob-orange" },
+];
 
 type ButtonProps = {
   children: ReactNode;
@@ -28,6 +46,16 @@ type ButtonProps = {
   ariaLabel?: string;
 };
 
+function Blobs() {
+  return (
+    <>
+      {BLOBS.map((blob, i) => (
+        <span key={i} aria-hidden="true" className={`${BLOB_BASE} ${blob.position} ${blob.color}`} />
+      ))}
+    </>
+  );
+}
+
 export default function Button({
   children,
   className = "",
@@ -37,24 +65,29 @@ export default function Button({
   type = "button",
   ariaLabel,
 }: ButtonProps) {
-  const classes = `${CTA_CLASSES} ${className}`;
+  const content = (
+    <>
+      <Blobs />
+      <span className={`${GLASS_CLASSES} ${className}`}>{children}</span>
+    </>
+  );
 
   if (href) {
     return (
       <Link
         href={href}
         aria-label={ariaLabel}
-        className={classes}
+        className={OUTER_CLASSES}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
-        {children}
+        {content}
       </Link>
     );
   }
 
   return (
-    <button type={type} onClick={onClick} aria-label={ariaLabel} className={classes}>
-      {children}
+    <button type={type} onClick={onClick} aria-label={ariaLabel} className={OUTER_CLASSES}>
+      {content}
     </button>
   );
 }
