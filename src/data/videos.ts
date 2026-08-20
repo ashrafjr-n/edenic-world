@@ -6,6 +6,7 @@ export const FEATURED_VIDEO: Video = {
   description: "Follow us to enjoy every new adventure. Our children deserve the best.",
   category: "stories",
   thumbnail: "from-edenic-bright-purple via-edenic-pink to-edenic-coral",
+  image: "/images/watch/youtube/Featured.png",
   youtubeId: "yDeZDCC4lEU",
 };
 
@@ -16,6 +17,7 @@ export const VIDEOS: Video[] = [
     description: "Building & creativity",
     category: "learning",
     thumbnail: "from-edenic-bright-blue via-edenic-purple to-edenic-bright-purple",
+    image: "/images/watch/youtube/nova-i-can-build-it.png",
     youtubeId: "ZLRxvTSUZCw",
   },
   {
@@ -24,6 +26,7 @@ export const VIDEOS: Video[] = [
     description: "Tidying up with Bloo",
     category: "learning",
     thumbnail: "from-edenic-coral via-edenic-pink to-edenic-bright-pink",
+    image: "/images/watch/youtube/bloo-clean.png",
     youtubeId: "ssSUXfHqA5E",
   },
   {
@@ -32,6 +35,7 @@ export const VIDEOS: Video[] = [
     description: "Say hello to Pinki",
     category: "fun",
     thumbnail: "from-edenic-lavender via-edenic-bright-purple to-edenic-blue",
+    image: "/images/watch/youtube/pinki-here.png",
     youtubeId: "uZCooswKCB4",
   },
   {
@@ -40,6 +44,7 @@ export const VIDEOS: Video[] = [
     description: "A happy moment with Nova",
     category: "fun",
     thumbnail: "from-edenic-gold via-edenic-coral to-edenic-bright-pink",
+    image: "/images/watch/youtube/nova-smile.png",
     youtubeId: "zLNNx-fgd-Y",
   },
   {
