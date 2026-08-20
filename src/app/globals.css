@@ -31,6 +31,11 @@
   --color-edenic-nova: #8fe0f5;
   --color-edenic-pinki: #e790c4;
   --color-edenic-bloo: #8fd7f5;
+
+  /* --- Luminous CTA button (see the `Button` component) --------------- */
+  --color-edenic-cta-border: #d9a9f6;
+  --color-edenic-cta-from: #a067ec;
+  --color-edenic-cta-to: #8449da;
 }
 
 @theme inline {
@@ -57,6 +62,9 @@
   --color-edenic-nova: var(--color-edenic-nova);
   --color-edenic-pinki: var(--color-edenic-pinki);
   --color-edenic-bloo: var(--color-edenic-bloo);
+  --color-edenic-cta-border: var(--color-edenic-cta-border);
+  --color-edenic-cta-from: var(--color-edenic-cta-from);
+  --color-edenic-cta-to: var(--color-edenic-cta-to);
 
   --animate-icon-wiggle: icon-wiggle 0.5s ease-in-out;
 }
