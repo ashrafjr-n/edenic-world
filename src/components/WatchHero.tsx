@@ -17,7 +17,7 @@ export default function WatchHero() {
         alt=""
         aria-hidden="true"
         fill
-        priority
+        loading="eager"
         sizes="100vw"
         className="scale-125 object-cover object-top blur-[80px]"
       />
