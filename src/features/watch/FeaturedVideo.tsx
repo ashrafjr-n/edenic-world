@@ -40,7 +40,7 @@ export default function FeaturedVideo({ video }: { video: Video }) {
                     className="absolute inset-0 size-full"
                   />
                   <Image
-                    src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
+                    src={video.image ?? `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
                     alt=""
                     fill
                     sizes="(min-width: 1024px) 60vw, 100vw"
