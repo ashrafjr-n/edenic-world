@@ -23,7 +23,7 @@ export default function VideoFilters({
               aria-pressed={isActive}
               className={`rounded-full px-[20px] py-[9px] text-[14px] font-semibold whitespace-nowrap transition-colors ${
                 isActive
-                  ? "shadow-edenic-cta bg-gradient-to-r from-edenic-bright-purple to-edenic-pink text-white"
+                  ? "bg-gradient-to-r from-edenic-bright-purple to-edenic-pink text-white shadow-[0_4px_16px_rgba(150,82,216,0.4)]"
                   : "border border-white/20 text-white/75 hover:bg-white/10 hover:text-white"
               }`}
             >
