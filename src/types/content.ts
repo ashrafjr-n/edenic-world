@@ -36,6 +36,14 @@ export type Video = {
   topicId?: Id;
 };
 
+/** "all" plus every category — the value a video filter control can hold. */
+export type VideoFilterValue = "all" | VideoCategory;
+
+export type VideoFilter = {
+  label: string;
+  value: VideoFilterValue;
+};
+
 export type Lesson = {
   id: Id;
   topicId: Id;

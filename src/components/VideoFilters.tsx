@@ -1,20 +1,19 @@
 "use client";
 
-import { VIDEO_FILTERS } from "@/data/videos";
-import type { VideoCategory } from "@/types/content";
-
-export type VideoFilterValue = "all" | VideoCategory;
+import type { VideoFilter, VideoFilterValue } from "@/types/content";
 
 export default function VideoFilters({
+  filters,
   active,
   onChange,
 }: {
+  filters: VideoFilter[];
   active: VideoFilterValue;
   onChange: (value: VideoFilterValue) => void;
 }) {
   return (
     <ul className="flex flex-nowrap gap-[10px]">
-      {VIDEO_FILTERS.map(({ label, value }) => {
+      {filters.map(({ label, value }) => {
         const isActive = value === active;
         return (
           <li key={value}>

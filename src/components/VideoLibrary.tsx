@@ -2,21 +2,27 @@
 
 import { useMemo, useState } from "react";
 import { Star } from "lucide-react";
-import { VIDEOS } from "@/data/videos";
-import VideoFilters, { type VideoFilterValue } from "@/components/VideoFilters";
+import type { Video, VideoFilter, VideoFilterValue } from "@/types/content";
+import VideoFilters from "@/components/VideoFilters";
 import VideoGrid from "@/components/VideoGrid";
 
 /**
- * Owns the filter state for the video library — filters and grid stay dumb,
- * presentational components so real YouTube/API data can replace VIDEOS
- * later without touching this wiring.
+ * Owns the filter state for the video library. It receives its videos and
+ * filters as props and never reaches for a data module itself, so the same
+ * component works against static data today and a real API later.
  */
-export default function VideoLibrary() {
+export default function VideoLibrary({
+  videos,
+  filters,
+}: {
+  videos: Video[];
+  filters: VideoFilter[];
+}) {
   const [active, setActive] = useState<VideoFilterValue>("all");
 
-  const videos = useMemo(
-    () => (active === "all" ? VIDEOS : VIDEOS.filter((video) => video.category === active)),
-    [active],
+  const visibleVideos = useMemo(
+    () => (active === "all" ? videos : videos.filter((video) => video.category === active)),
+    [videos, active],
   );
 
   return (
@@ -27,11 +33,11 @@ export default function VideoLibrary() {
       </h2>
 
       <div className="mt-[20px] -mx-[clamp(22px,3.6vw,48px)] overflow-x-auto px-[clamp(22px,3.6vw,48px)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <VideoFilters active={active} onChange={setActive} />
+        <VideoFilters filters={filters} active={active} onChange={setActive} />
       </div>
 
       <div className="mt-[30px]">
-        <VideoGrid videos={videos} />
+        <VideoGrid videos={visibleVideos} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import type { Video, VideoCategory } from "@/types/content";
+import type { Video, VideoFilter } from "@/types/content";
 
 export const FEATURED_VIDEO: Video = {
   id: "guess-what-the-story-is",
@@ -60,7 +60,7 @@ export const VIDEOS: Video[] = [
   },
 ];
 
-export const VIDEO_FILTERS: { label: string; value: "all" | VideoCategory }[] = [
+export const VIDEO_FILTERS: VideoFilter[] = [
   { label: "All", value: "all" },
   { label: "Songs", value: "songs" },
   { label: "Learning", value: "learning" },

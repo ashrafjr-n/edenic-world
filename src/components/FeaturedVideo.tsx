@@ -4,13 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Play, Star } from "lucide-react";
-import { FEATURED_VIDEO } from "@/data/videos";
+import type { Video } from "@/types/content";
 
 const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@EdenicWorld-kids";
 
-export default function FeaturedVideo() {
+export default function FeaturedVideo({ video }: { video: Video }) {
   const [isPlaying, setIsPlaying] = useState(false);
-  const play = () => FEATURED_VIDEO.youtubeId && setIsPlaying(true);
+  const play = () => video.youtubeId && setIsPlaying(true);
 
   return (
     <div>
@@ -21,28 +21,28 @@ export default function FeaturedVideo() {
 
       <div className="mt-[22px] grid gap-[28px] lg:grid-cols-[1.5fr_1fr] lg:items-center">
         <div
-          className={`group relative aspect-video overflow-hidden rounded-[26px] bg-gradient-to-br ${FEATURED_VIDEO.thumbnail} shadow-edenic transition-transform duration-300 hover:-translate-y-1`}
+          className={`group relative aspect-video overflow-hidden rounded-[26px] bg-gradient-to-br ${video.thumbnail} shadow-edenic transition-transform duration-300 hover:-translate-y-1`}
         >
-          {isPlaying && FEATURED_VIDEO.youtubeId ? (
+          {isPlaying && video.youtubeId ? (
             <iframe
-              src={`https://www.youtube-nocookie.com/embed/${FEATURED_VIDEO.youtubeId}?autoplay=1`}
-              title={FEATURED_VIDEO.title}
+              src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1`}
+              title={video.title}
               allow="autoplay; encrypted-media; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 size-full"
             />
           ) : (
             <>
-              {FEATURED_VIDEO.youtubeId && (
+              {video.youtubeId && (
                 <>
                   <button
                     type="button"
                     onClick={play}
-                    aria-label={`Play ${FEATURED_VIDEO.title}`}
+                    aria-label={`Play ${video.title}`}
                     className="absolute inset-0 size-full"
                   />
                   <Image
-                    src={`https://img.youtube.com/vi/${FEATURED_VIDEO.youtubeId}/hqdefault.jpg`}
+                    src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
                     alt=""
                     fill
                     sizes="(min-width: 1024px) 60vw, 100vw"
@@ -56,9 +56,9 @@ export default function FeaturedVideo() {
                   <Play className="size-8 translate-x-[2px] fill-white text-white sm:size-9" aria-hidden="true" />
                 </span>
               </span>
-              {FEATURED_VIDEO.duration && (
+              {video.duration && (
                 <span className="pointer-events-none absolute right-4 bottom-4 rounded-full bg-edenic-bg/70 px-[12px] py-[4px] text-[13px] font-semibold text-white backdrop-blur-sm">
-                  {FEATURED_VIDEO.duration}
+                  {video.duration}
                 </span>
               )}
             </>
@@ -67,11 +67,9 @@ export default function FeaturedVideo() {
 
         <div>
           <h3 className="font-display text-[24px] leading-[1.15] font-bold text-white sm:text-[30px]">
-            {FEATURED_VIDEO.title}
+            {video.title}
           </h3>
-          <p className="mt-[10px] text-[16px] font-medium text-white/80">
-            {FEATURED_VIDEO.description}
-          </p>
+          <p className="mt-[10px] text-[16px] font-medium text-white/80">{video.description}</p>
           <Link
             href={YOUTUBE_CHANNEL_URL}
             target="_blank"
