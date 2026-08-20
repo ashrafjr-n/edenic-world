@@ -6,12 +6,16 @@ import { Play } from "lucide-react";
 import type { Video } from "@/types/content";
 
 /**
- * The video surface on the video detail page (`/watch/[videoId]`). Thumbnail
- * first, iframe only once the visitor presses play — same rule as
- * `VideoCard`/`FeaturedVideo`, per vibe.md §9.
+ * The video surface on the video detail page (`/watch/[videoId]`). Starts
+ * already playing when there's a `youtubeId`: the visitor's "ask to play"
+ * already happened — they clicked the thumbnail on `/watch` to get here — so
+ * requiring a second click here would just be friction, not a second consent.
+ * (vibe.md §9's "iframe only once asked" is about not preloading video on
+ * pages nobody clicked into, e.g. the grid; it's satisfied by that click, not
+ * bypassed by this default.)
  */
 export default function VideoPlayer({ video }: { video: Video }) {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(Boolean(video.youtubeId));
 
   return (
     <div
