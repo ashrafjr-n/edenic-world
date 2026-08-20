@@ -6,8 +6,11 @@ import Container from "@/components/Container";
  * Same treatment as the Home hero (Hero.tsx): the artwork is laid in along
  * the bottom at full width, with a blurred copy of itself extending the sky
  * above it so the landscape stays uncropped at any hero height. Unlike the
- * Home hero, the bottom edge is a plain gradient fade into `edenic-bg`
- * rather than the wave shape — no dividing line at all, curved or straight.
+ * Home hero, both edges are plain gradient fades into `edenic-bg` rather
+ * than the wave shape — no dividing line at all, curved or straight. This
+ * section now closes the page (below the Featured Video panel), so the top
+ * fade matters as much as the bottom one: it blends the seam against the
+ * flat `edenic-bg` content sitting above it.
  */
 export default function WatchHero() {
   return (
@@ -34,6 +37,7 @@ export default function WatchHero() {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[46%] bg-gradient-to-b from-edenic-deep/95 via-edenic-deep/30 to-transparent" />
       <div className="pointer-events-none absolute inset-0 bg-hero-glow opacity-35" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-edenic-bg/62 via-edenic-bg/12 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[14%] bg-gradient-to-b from-edenic-bg to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[38%] bg-gradient-to-b from-transparent to-edenic-bg" />
 
       {/* Decorative stars & notes, scattered across the top band above the characters. */}
