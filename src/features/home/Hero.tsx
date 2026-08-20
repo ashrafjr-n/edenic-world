@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Play, Star } from "lucide-react";
+import Button from "@/components/Button";
 import Container from "@/components/Container";
 import HeroCurve from "@/features/home/HeroCurve";
 
@@ -65,16 +66,16 @@ export default function Hero() {
           </p>
 
           <div className="mt-[3vh] flex items-center gap-[30px]">
-            <Link
+            <Button
               href="/learn"
-              className="shadow-edenic-cta group inline-flex h-[clamp(46px,6.2vh,68px)] items-center gap-[12px] rounded-full border-2 border-[#d9a9f6] bg-gradient-to-b from-[#a067ec] to-[#8449da] px-[clamp(24px,2.3vw,40px)] text-[clamp(14px,min(1.14vw,1.72vh),21px)] font-bold text-white transition-transform hover:scale-[1.03]"
+              className="h-[clamp(46px,6.2vh,68px)] gap-[12px] px-[clamp(24px,2.3vw,40px)] text-[clamp(14px,min(1.14vw,1.72vh),21px)]"
             >
               Start the Adventure
               <Star
                 className="size-5 fill-edenic-peach text-edenic-peach group-hover:animate-icon-wiggle"
                 aria-hidden="true"
               />
-            </Link>
+            </Button>
 
             <Link
               href="/watch"

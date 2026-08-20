@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Play, Star } from "lucide-react";
+import { Play } from "lucide-react";
+import Button from "@/components/Button";
+import SectionHeader from "@/components/SectionHeader";
 import type { Video } from "@/types/content";
 
 const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@EdenicWorld-kids";
@@ -14,10 +15,7 @@ export default function FeaturedVideo({ video }: { video: Video }) {
 
   return (
     <div>
-      <h2 className="font-display flex items-center gap-[10px] text-[22px] font-bold text-white sm:text-[26px]">
-        Featured Video
-        <Star className="size-[19px] fill-edenic-gold text-edenic-gold" aria-hidden="true" />
-      </h2>
+      <SectionHeader>Featured Video</SectionHeader>
 
       <div className="mt-[22px] grid gap-[28px] lg:grid-cols-[1.5fr_1fr] lg:items-center">
         <div
@@ -70,15 +68,14 @@ export default function FeaturedVideo({ video }: { video: Video }) {
             {video.title}
           </h3>
           <p className="mt-[10px] text-[16px] font-medium text-white/80">{video.description}</p>
-          <Link
+          <Button
             href={YOUTUBE_CHANNEL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shadow-edenic-cta mt-[24px] inline-flex h-[54px] items-center gap-[10px] rounded-full border-2 border-[#d9a9f6] bg-gradient-to-b from-[#a067ec] to-[#8449da] px-[30px] text-[16px] font-bold text-white transition-transform hover:scale-[1.03]"
+            external
+            className="mt-[24px] h-[54px] gap-[10px] px-[30px] text-[16px]"
           >
             <Play className="size-4 fill-white text-white" aria-hidden="true" />
             Watch Now
-          </Link>
+          </Button>
         </div>
       </div>
     </div>

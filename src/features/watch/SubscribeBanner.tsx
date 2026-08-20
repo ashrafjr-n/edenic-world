@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Bell } from "lucide-react";
+import Button from "@/components/Button";
 
 export default function SubscribeBanner() {
   return (
@@ -30,16 +30,13 @@ export default function SubscribeBanner() {
           </p>
         </div>
 
-        <Link
-          href="#"
-          className="shadow-edenic-cta group inline-flex h-[54px] shrink-0 items-center gap-[10px] rounded-full border-2 border-[#d9a9f6] bg-gradient-to-b from-[#a067ec] to-[#8449da] px-[30px] text-[16px] font-bold text-white transition-transform hover:scale-[1.03]"
-        >
+        <Button href="#" className="h-[54px] shrink-0 gap-[10px] px-[30px] text-[16px]">
           <Bell
             className="size-[18px] fill-white text-white group-hover:animate-icon-wiggle"
             aria-hidden="true"
           />
           Subscribe
-        </Link>
+        </Button>
       </div>
     </div>
   );

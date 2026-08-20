@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Star } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 import type { Video, VideoFilter, VideoFilterValue } from "@/types/content";
 import VideoFilters from "@/components/VideoFilters";
 import VideoGrid from "@/components/VideoGrid";
@@ -27,10 +27,7 @@ export default function VideoLibrary({
 
   return (
     <div>
-      <h2 className="font-display flex items-center gap-[10px] text-[22px] font-bold text-white sm:text-[26px]">
-        All Videos
-        <Star className="size-[19px] fill-edenic-gold text-edenic-gold" aria-hidden="true" />
-      </h2>
+      <SectionHeader>All Videos</SectionHeader>
 
       <div className="mt-[20px] -mx-[clamp(22px,3.6vw,48px)] overflow-x-auto px-[clamp(22px,3.6vw,48px)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <VideoFilters filters={filters} active={active} onChange={setActive} />
