@@ -1,5 +1,5 @@
 import VideoCard from "@/components/VideoCard";
-import type { Video } from "@/lib/videos";
+import type { Video } from "@/types/content";
 
 export default function VideoGrid({ videos }: { videos: Video[] }) {
   if (videos.length === 0) {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { BookOpen, Music2, Play, Sparkles, Star } from "lucide-react";
-import type { Video, VideoCategory } from "@/lib/videos";
+import type { Video, VideoCategory } from "@/types/content";
 
 const CATEGORY_ICON: Record<VideoCategory, typeof Music2> = {
   songs: Music2,

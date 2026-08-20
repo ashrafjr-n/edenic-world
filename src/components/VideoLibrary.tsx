@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Star } from "lucide-react";
-import { VIDEOS } from "@/lib/videos";
+import { VIDEOS } from "@/data/videos";
 import VideoFilters, { type VideoFilterValue } from "@/components/VideoFilters";
 import VideoGrid from "@/components/VideoGrid";
 

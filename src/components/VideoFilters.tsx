@@ -1,6 +1,7 @@
 "use client";
 
-import { VIDEO_FILTERS, type VideoCategory } from "@/lib/videos";
+import { VIDEO_FILTERS } from "@/data/videos";
+import type { VideoCategory } from "@/types/content";
 
 export type VideoFilterValue = "all" | VideoCategory;
 

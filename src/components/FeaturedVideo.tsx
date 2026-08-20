@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Play, Star } from "lucide-react";
-import { FEATURED_VIDEO } from "@/lib/videos";
+import { FEATURED_VIDEO } from "@/data/videos";
 
 const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@EdenicWorld-kids";
 

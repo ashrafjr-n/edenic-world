@@ -1,21 +1,4 @@
-export type VideoCategory = "songs" | "learning" | "stories" | "fun";
-
-export type Video = {
-  id: string;
-  title: string;
-  description: string;
-  category: VideoCategory;
-  /** Unknown until real videos are timed/synced from YouTube — the duration
-   *  badge only renders when this is set. */
-  duration?: string;
-  /** Tailwind gradient stops shown behind the thumbnail while it loads, and
-   *  as the whole thumbnail for videos with no `youtubeId` yet. */
-  thumbnail: string;
-  /** YouTube video ID. When set, the thumbnail is the real YouTube thumbnail
-   *  and the card plays an embedded player in place on click. Videos without
-   *  one stay placeholder-only. */
-  youtubeId?: string;
-};
+import type { Video, VideoCategory } from "@/types/content";
 
 export const FEATURED_VIDEO: Video = {
   id: "guess-what-the-story-is",
