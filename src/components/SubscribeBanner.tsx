@@ -7,19 +7,19 @@ export default function SubscribeBanner() {
     <div className="bg-card-watch shadow-edenic relative overflow-hidden rounded-[28px] px-[clamp(24px,4vw,48px)] py-[clamp(24px,3.6vh,38px)]">
       <span className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent from-35% to-edenic-bg/30" />
 
-      <div className="relative flex flex-col items-center gap-[22px] text-center sm:flex-row sm:text-left">
-        <span className="relative size-[84px] shrink-0 overflow-hidden rounded-[22px] ring-1 ring-white/25 sm:size-[96px]">
-          <Image
-            src="/images/home-CTA/watch.jpg"
-            alt=""
-            aria-hidden="true"
-            fill
-            sizes="96px"
-            className="object-cover object-[68%_50%]"
-          />
-        </span>
+      {/* Art bleeds off the right edge and dissolves into the surface — same
+          treatment as the Home page's Watch card. */}
+      <Image
+        src="/images/home-CTA/watch.jpg"
+        alt=""
+        aria-hidden="true"
+        width={600}
+        height={490}
+        className="card-art-mask pointer-events-none absolute right-0 bottom-0 h-[clamp(110px,20vh,170px)] w-auto max-w-none object-cover"
+      />
 
-        <div className="flex-1">
+      <div className="relative flex flex-col items-start gap-[16px] sm:flex-row sm:items-center sm:gap-[28px]">
+        <div>
           <h2 className="font-display text-[22px] font-bold text-white sm:text-[26px]">
             New videos every week!
           </h2>
