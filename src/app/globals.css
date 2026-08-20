@@ -36,6 +36,12 @@
   --color-edenic-cta-border: #d9a9f6;
   --color-edenic-cta-from: #a067ec;
   --color-edenic-cta-to: #8449da;
+
+  /* --- Liquid-glass button blobs (see the `Button` component) --------- */
+  --color-edenic-blob-orange: #ff930f;
+  --color-edenic-blob-purple: #bf0fff;
+  --color-edenic-blob-pink: #ff1b6b;
+  --color-edenic-blob-blue: #0061ff;
 }
 
 @theme inline {
@@ -65,6 +71,10 @@
   --color-edenic-cta-border: var(--color-edenic-cta-border);
   --color-edenic-cta-from: var(--color-edenic-cta-from);
   --color-edenic-cta-to: var(--color-edenic-cta-to);
+  --color-edenic-blob-orange: var(--color-edenic-blob-orange);
+  --color-edenic-blob-purple: var(--color-edenic-blob-purple);
+  --color-edenic-blob-pink: var(--color-edenic-blob-pink);
+  --color-edenic-blob-blue: var(--color-edenic-blob-blue);
 
   --animate-icon-wiggle: icon-wiggle 0.5s ease-in-out;
 }
@@ -139,6 +149,12 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* Frosted glass surface for the `Button` component — sits over the blob
+   layer so `backdrop-filter` refracts their colour into a soft blur. */
+.bg-button-glass {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.473), rgba(150, 150, 150, 0.25));
 }
 
 /* Atmospheric glow behind the hero characters */
