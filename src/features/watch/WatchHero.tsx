@@ -38,11 +38,11 @@ export default function WatchHero() {
 
       {/* Decorative stars & notes, scattered across the top band above the characters. */}
       <Star
-        className="pointer-events-none absolute top-[12%] left-[34%] size-[18px] fill-edenic-gold text-edenic-gold opacity-80 drop-shadow-[0_2px_10px_rgba(206,146,79,0.5)]"
+        className="drop-shadow-edenic-gold pointer-events-none absolute top-[12%] left-[34%] size-[18px] fill-edenic-gold text-edenic-gold opacity-80"
         aria-hidden="true"
       />
       <Music2
-        className="pointer-events-none absolute top-[22%] left-[48%] size-5 text-edenic-soft-pink opacity-75 drop-shadow-[0_2px_10px_rgba(38,29,82,0.4)]"
+        className="drop-shadow-edenic-deep pointer-events-none absolute top-[22%] left-[48%] size-5 text-edenic-soft-pink opacity-75"
         aria-hidden="true"
       />
       <Star
@@ -56,7 +56,7 @@ export default function WatchHero() {
 
       <Container className="relative z-20 flex h-full flex-col justify-center">
         <div className="max-w-[700px] xl:pl-[44px]">
-          <h1 className="font-display text-[clamp(36px,min(5vw,7.4vh),80px)] leading-[1.05] font-bold tracking-[-0.005em] drop-shadow-[0_6px_24px_rgba(38,29,82,0.45)]">
+          <h1 className="font-display drop-shadow-edenic-heading text-[clamp(36px,min(5vw,7.4vh),80px)] leading-[1.05] font-bold tracking-[-0.005em]">
             <span className="text-white">Watch </span>
             <span className="text-imagine-gradient">&amp; Enjoy</span>
           </h1>
