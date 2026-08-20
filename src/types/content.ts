@@ -29,8 +29,12 @@ export type Video = {
   /** Tailwind gradient stops shown behind the thumbnail while it loads, and as
    *  the whole thumbnail for videos with no `youtubeId` yet. */
   thumbnail: string;
-  /** When set, the card shows the real YouTube thumbnail and plays an embedded
-   *  player in place. Videos without one stay placeholder-only. */
+  /** Custom branded artwork (`public/images/watch/youtube/…`), preferred over
+   *  the generic YouTube auto-thumbnail everywhere the video is shown. */
+  image?: string;
+  /** When set, the card shows a thumbnail and plays an embedded player in
+   *  place (grid) or links to `/watch/[videoId]` (card). Videos without one
+   *  stay placeholder-only. */
   youtubeId?: string;
   /** Set once the video belongs to a Learn topic; standalone videos have none. */
   topicId?: Id;
