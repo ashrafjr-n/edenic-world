@@ -10,13 +10,21 @@ import type { ReactNode } from "react";
  * CTAs are fixed. `className` lands on the inner glass surface (not the
  * outer element) so the outer keeps shrink-wrapping to it and the blobs'
  * percentage positions stay correct for any size, from an icon-only square
- * to the wide hero CTA.
+ * to the wide hero CTA. `w-fit` makes that shrink-wrap explicit: without it,
+ * the outer silently blockifies and stretches to fill the cross axis the
+ * moment a caller drops the button straight into a flex/grid container that
+ * doesn't itself center its items (e.g. a `flex flex-col` page wrapper).
+ *
+ * Never a border — a `border-*` here would sit outside the blobs' padding-box
+ * (their `absolute`/`h-full` sizing stops at the padding edge, not the
+ * border edge), so any border colour, even "transparent", shows the page
+ * background through as a stray ring around the pill.
  *
  * `group` is always present so a caller can wiggle its icon on hover with
  * `group-hover:animate-icon-wiggle`, per the project's icon-only hover rule.
  */
 const OUTER_CLASSES =
-  "group relative isolate inline-flex cursor-pointer overflow-hidden rounded-full border-2 border-transparent text-white shadow-edenic-cta transition-transform hover:scale-[1.03] active:border-white";
+  "group relative isolate inline-flex w-fit cursor-pointer overflow-hidden rounded-full text-white shadow-edenic-cta transition-transform hover:scale-[1.03]";
 
 const GLASS_CLASSES =
   "bg-button-glass relative z-[1] inline-flex items-center rounded-full font-bold backdrop-blur-[10px]";
