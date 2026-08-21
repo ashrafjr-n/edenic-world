@@ -13,7 +13,7 @@ export default function HeroCurve() {
     >
       <path
         d="M0,35 C160,20 320,0 480,0 C900,0 1250,38 1580,52 C1700,57 1790,44 1854,26 L1854,120 L0,120 Z"
-        fill="var(--color-edenic-bg)"
+        fill="var(--color-edenic-void-deep)"
       />
     </svg>
   );
