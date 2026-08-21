@@ -14,7 +14,7 @@ const EXPLORE_LINKS = [
 export default function ExploreSidebar() {
   return (
     <div className="flex flex-col gap-[24px]">
-      <div className="shadow-edenic rounded-[28px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(20px,2.2vw,28px)]">
+      <div className="rounded-[28px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(20px,2.2vw,28px)]">
         <h2 className="font-display text-[20px] font-bold text-white">Explore</h2>
 
         <ul className="mt-[16px] flex flex-col gap-[10px]">
@@ -36,7 +36,7 @@ export default function ExploreSidebar() {
         </ul>
       </div>
 
-      <div className="bg-card-watch shadow-edenic relative overflow-hidden rounded-[28px] p-[clamp(20px,2.2vw,28px)]">
+      <div className="shadow-edenic relative overflow-hidden rounded-[28px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(20px,2.2vw,28px)]">
         <Lightbulb
           className="pointer-events-none absolute -right-3 -bottom-3 size-[100px] text-white/10"
           aria-hidden="true"
