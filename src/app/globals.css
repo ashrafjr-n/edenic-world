@@ -208,6 +208,8 @@ html {
 }
 
 body {
+  isolation: isolate;
+  min-height: 100vh;
   background: radial-gradient(
     ellipse at 50% 0%,
     var(--color-edenic-void-top) 0%,
