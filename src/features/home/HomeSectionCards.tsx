@@ -58,7 +58,7 @@ export default function HomeSectionCards() {
 
                 {/* Grounds the card — the surface settles into the page colour
                     towards the bottom instead of glowing evenly all over. */}
-                <span className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent from-35% to-edenic-bg/30" />
+                <span className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent from-35% to-edenic-void-deep/30" />
 
                 <div className="relative">
                   <h2 className="font-display text-[clamp(24px,min(2.16vw,3.25vh),40px)] leading-[1.1] font-extrabold text-white">
