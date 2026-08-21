@@ -16,7 +16,7 @@ export default function WatchPage() {
     <main className="relative w-full">
       <Header activeHref="/watch" />
 
-      <div className="bg-edenic-void-deep relative z-10 min-h-screen pt-[clamp(96px,15vh,168px)] pb-[8vh]">
+      <div className="bg-edenic-void-gradient relative z-10 min-h-screen isolate pt-[clamp(96px,15vh,168px)] pb-[8vh]">
         <Container className="flex flex-col gap-[6vh]">
           <WatchIntro video={getFeaturedVideo()} />
 

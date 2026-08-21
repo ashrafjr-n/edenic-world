@@ -203,6 +203,18 @@
   filter: drop-shadow(0 2px 10px rgba(38, 29, 82, 0.4));
 }
 
+/* The site-wide page background — same formula as `body` below, exposed as a
+   utility so a page that needs its own wrapper (instead of inheriting `body`
+   directly) still renders the identical gradient rather than a flat colour. */
+.bg-edenic-void-gradient {
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    var(--color-edenic-void-top) 0%,
+    var(--color-edenic-void-mid) 50%,
+    var(--color-edenic-void-deep) 100%
+  );
+}
+
 html {
   background: var(--color-edenic-void-deep);
 }

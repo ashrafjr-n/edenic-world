@@ -35,7 +35,7 @@ export default async function VideoPage(props: PageProps<"/watch/[videoId]">) {
   const categoryLabel = getVideoFilters().find((filter) => filter.value === video.category)?.label ?? video.category;
 
   return (
-    <main className="relative min-h-screen w-full overflow-hidden bg-edenic-void-deep pt-[clamp(90px,14vh,160px)] pb-[9vh]">
+    <main className="relative isolate min-h-screen w-full overflow-hidden bg-edenic-void-gradient pt-[clamp(90px,14vh,160px)] pb-[9vh]">
       <Header activeHref="/watch" />
 
       <Container className="relative z-10 flex flex-col gap-[6vh]">
