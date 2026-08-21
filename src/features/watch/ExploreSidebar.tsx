@@ -36,7 +36,7 @@ export default function ExploreSidebar() {
         </ul>
       </div>
 
-      <div className="shadow-edenic relative overflow-hidden rounded-[28px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(20px,2.2vw,28px)]">
+      <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(20px,2.2vw,28px)]">
         <Lightbulb
           className="pointer-events-none absolute -right-3 -bottom-3 size-[100px] text-white/10"
           aria-hidden="true"
@@ -49,10 +49,12 @@ export default function ExploreSidebar() {
           Tell us what you&apos;d like to see next!
         </p>
 
-        <Button href="#" className="relative mt-[18px] h-[46px] gap-[8px] px-[22px] text-[14px]">
-          <Lightbulb className="size-[15px]" aria-hidden="true" />
-          Send Idea
-        </Button>
+        <div className="relative mt-[18px]">
+          <Button href="#" className="h-[46px] gap-[8px] px-[22px] text-[14px]">
+            <Lightbulb className="size-[15px]" aria-hidden="true" />
+            Send Idea
+          </Button>
+        </div>
       </div>
     </div>
   );
