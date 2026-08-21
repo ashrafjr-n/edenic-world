@@ -12,7 +12,7 @@ export default function FeaturedVideo({ video }: { video: Video }) {
 
   return (
     <div
-      className={`group relative aspect-video overflow-hidden rounded-[26px] bg-gradient-to-br ${video.thumbnail} shadow-edenic transition-transform duration-300 hover:-translate-y-1`}
+      className={`group relative aspect-video overflow-hidden rounded-[26px] bg-gradient-to-br ${video.thumbnail} transition-transform duration-300 hover:-translate-y-1`}
     >
       {isPlaying && video.youtubeId ? (
         <iframe

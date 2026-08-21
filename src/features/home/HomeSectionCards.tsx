@@ -45,7 +45,7 @@ export default function HomeSectionCards() {
             <li key={href}>
               <Link
                 href={href}
-                className={`shadow-edenic group relative flex h-[clamp(200px,24vh,290px)] flex-col justify-between overflow-hidden rounded-[28px] pt-[clamp(20px,3vh,34px)] pr-[32px] pb-[clamp(24px,3.6vh,42px)] pl-[clamp(24px,2.1vw,38px)] ${surface}`}
+                className={`group relative flex h-[clamp(200px,24vh,290px)] flex-col justify-between overflow-hidden rounded-[28px] pt-[clamp(20px,3vh,34px)] pr-[32px] pb-[clamp(24px,3.6vh,42px)] pl-[clamp(24px,2.1vw,38px)] ${surface}`}
               >
                 {/* Art bleeds off the right edge and dissolves into the surface. */}
                 <Image

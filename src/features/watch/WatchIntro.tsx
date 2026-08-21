@@ -11,7 +11,7 @@ export default function WatchIntro({ video }: { video: Video }) {
   return (
     <div className="grid gap-[36px] lg:grid-cols-[1fr_1.4fr] lg:items-center">
       <div>
-        <h1 className="font-display drop-shadow-edenic-heading text-[clamp(34px,min(4.6vw,7vh),72px)] leading-[1.05] font-bold tracking-[-0.005em]">
+        <h1 className="font-display text-[clamp(34px,min(4.6vw,7vh),72px)] leading-[1.05] font-bold tracking-[-0.005em]">
           <span className="text-white">Watch </span>
           <span className="text-imagine-gradient">&amp; Enjoy</span>
         </h1>

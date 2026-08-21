@@ -46,9 +46,9 @@ export default async function VideoPage(props: PageProps<"/watch/[videoId]">) {
           />
         </Button>
 
-        <div className="shadow-edenic relative overflow-hidden rounded-[36px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(22px,3.6vw,48px)]">
+        <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(22px,3.6vw,48px)]">
           {/* Atmospheric glow, clipped to the panel's own rounded edge so it
-              never shows a hard rectangular seam against the flat page
+              never shows a hard rectangular seam against the page
               background the way a free-floating glow div would. */}
           <div aria-hidden="true" className="bg-hero-glow pointer-events-none absolute inset-0 opacity-30" />
 
@@ -66,7 +66,7 @@ export default async function VideoPage(props: PageProps<"/watch/[videoId]">) {
 
           <div className="grid gap-[32px] lg:grid-cols-[1.55fr_1fr] lg:items-center">
             {/* A soft luminous ring around the player, like a window into the story. */}
-            <div className="shadow-edenic-cta rounded-[28px] bg-gradient-to-br from-edenic-cta-border/70 via-white/10 to-transparent p-[3px]">
+            <div className="rounded-[28px] bg-gradient-to-br from-edenic-cta-border/70 via-white/10 to-transparent p-[3px]">
               <VideoPlayer video={video} />
             </div>
 
@@ -90,7 +90,7 @@ export default async function VideoPage(props: PageProps<"/watch/[videoId]">) {
                 <span
                   aria-disabled="true"
                   title="Coming soon"
-                  className="bg-card-learn shadow-edenic relative grid size-[64px] cursor-not-allowed place-items-center rounded-full text-white opacity-45"
+                  className="bg-card-learn relative grid size-[64px] cursor-not-allowed place-items-center rounded-full text-white opacity-45"
                 >
                   <BookOpen className="size-6" aria-hidden="true" />
                   <span className="sr-only">Go to Learn (coming soon)</span>
@@ -102,7 +102,7 @@ export default async function VideoPage(props: PageProps<"/watch/[videoId]">) {
                 <span
                   aria-disabled="true"
                   title="Coming soon"
-                  className="bg-card-play shadow-edenic relative grid size-[64px] cursor-not-allowed place-items-center rounded-full text-white opacity-45"
+                  className="bg-card-play relative grid size-[64px] cursor-not-allowed place-items-center rounded-full text-white opacity-45"
                 >
                   <Gamepad2 className="size-6" aria-hidden="true" />
                   <span className="sr-only">Go to Play (coming soon)</span>

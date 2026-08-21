@@ -19,7 +19,7 @@ export default function VideoPlayer({ video }: { video: Video }) {
 
   return (
     <div
-      className={`group relative aspect-video overflow-hidden rounded-[26px] bg-gradient-to-br ${video.thumbnail} shadow-edenic`}
+      className={`group relative aspect-video overflow-hidden rounded-[26px] bg-gradient-to-br ${video.thumbnail}`}
     >
       {isPlaying && video.youtubeId ? (
         <iframe

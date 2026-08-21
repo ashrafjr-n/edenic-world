@@ -47,7 +47,7 @@ export default function Hero() {
 
       <Container className="relative z-20 flex h-full flex-col justify-start pt-[15vh]">
         <div className="max-w-[760px] xl:pl-[44px]">
-          <h1 className="font-display drop-shadow-edenic-heading font-bold tracking-[-0.005em]">
+          <h1 className="font-display font-bold tracking-[-0.005em]">
             <span className="block text-[clamp(38px,min(4.35vw,6.55vh),81px)] leading-[1.0] text-white">
               Learn, Play,
             </span>

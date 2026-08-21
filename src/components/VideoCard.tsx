@@ -22,7 +22,7 @@ export default function VideoCard({ video }: { video: Video }) {
 
   const thumbnail = (
     <div
-      className={`relative aspect-video overflow-hidden rounded-[22px] bg-gradient-to-br ${video.thumbnail} shadow-edenic transition-all duration-300 group-hover:-translate-y-1`}
+      className={`relative aspect-video overflow-hidden rounded-[22px] bg-gradient-to-br ${video.thumbnail} transition-all duration-300 group-hover:-translate-y-1`}
     >
       {thumbnailSrc && (
         <Image
