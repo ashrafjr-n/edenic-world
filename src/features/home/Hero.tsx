@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Play, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import Button from "@/components/Button";
 import Container from "@/components/Container";
 import HeroCurve from "@/features/home/HeroCurve";
@@ -76,19 +75,6 @@ export default function Hero() {
                 aria-hidden="true"
               />
             </Button>
-
-            <Link
-              href="/watch"
-              className="group inline-flex items-center gap-[17px] text-[clamp(13px,min(0.95vw,1.45vh),17.5px)] font-semibold text-white"
-            >
-              <span className="grid size-[clamp(38px,4.9vh,54px)] place-items-center rounded-full border border-white/55 bg-white/10 transition-colors group-hover:bg-white/20">
-                <Play
-                  className="size-4 translate-x-[1px] fill-white text-white"
-                  aria-hidden="true"
-                />
-              </span>
-              Watch Intro
-            </Link>
           </div>
         </div>
       </Container>
