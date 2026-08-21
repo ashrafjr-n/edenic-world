@@ -24,7 +24,7 @@ import type { ReactNode } from "react";
  * `group-hover:animate-icon-wiggle`, per the project's icon-only hover rule.
  */
 const OUTER_CLASSES =
-  "group relative isolate inline-flex w-fit cursor-pointer overflow-hidden rounded-full text-white shadow-edenic-cta transition-transform hover:scale-[1.03]";
+  "group relative isolate inline-flex w-fit cursor-pointer overflow-hidden rounded-full text-white shadow-edenic-cta";
 
 const GLASS_CLASSES =
   "bg-button-glass relative z-[1] inline-flex items-center rounded-full font-bold backdrop-blur-[10px]";
