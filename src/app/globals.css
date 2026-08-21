@@ -42,6 +42,11 @@
   --color-edenic-blob-purple: #bf0fff;
   --color-edenic-blob-pink: #ff1b6b;
   --color-edenic-blob-blue: #0061ff;
+
+  /* --- Site-wide page background (the `body` radial gradient) --------- */
+  --color-edenic-void-top: #1a0d2e;
+  --color-edenic-void-mid: #0d0a1a;
+  --color-edenic-void-deep: #080010;
 }
 
 @theme inline {
@@ -75,6 +80,9 @@
   --color-edenic-blob-purple: var(--color-edenic-blob-purple);
   --color-edenic-blob-pink: var(--color-edenic-blob-pink);
   --color-edenic-blob-blue: var(--color-edenic-blob-blue);
+  --color-edenic-void-top: var(--color-edenic-void-top);
+  --color-edenic-void-mid: var(--color-edenic-void-mid);
+  --color-edenic-void-deep: var(--color-edenic-void-deep);
 
   --animate-icon-wiggle: icon-wiggle 0.5s ease-in-out;
 }
@@ -196,15 +204,15 @@
 }
 
 html {
-  background: var(--color-edenic-bg);
+  background: var(--color-edenic-void-deep);
 }
 
 body {
-  background: linear-gradient(
-    180deg,
-    var(--color-edenic-deep) 0%,
-    var(--color-edenic-bg) 45%,
-    var(--color-edenic-bg) 100%
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    var(--color-edenic-void-top) 0%,
+    var(--color-edenic-void-mid) 50%,
+    var(--color-edenic-void-deep) 100%
   );
   color: var(--color-edenic-white);
   font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
