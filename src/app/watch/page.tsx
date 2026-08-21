@@ -21,7 +21,7 @@ export default function WatchPage() {
           <WatchIntro video={getFeaturedVideo()} />
 
           <div className="grid gap-[24px] lg:grid-cols-[1.7fr_1fr] lg:items-start">
-            <div className="shadow-edenic rounded-[32px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(22px,3.6vw,48px)]">
+            <div className="rounded-[32px] border border-white/10 bg-edenic-deep-purple/35 p-[clamp(22px,3.6vw,48px)]">
               <VideoLibrary videos={getVideos()} filters={getVideoFilters()} />
             </div>
 
