@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 /**
  * The Edenic liquid-glass CTA: a frosted pill floating over four colour
  * blobs, refracted through `backdrop-filter` and swapping hue on hover.
- * Owns only the identity of the button — surface, blobs, glow, hover —
+ * Owns only the identity of the button — surface, blobs, hover —
  * deliberately no size: callers pass height, padding, gap and type scale
  * via `className`, because the hero's CTA is fluid (`clamp`) while in-card
  * CTAs are fixed. `className` lands on the inner glass surface (not the
@@ -14,6 +14,14 @@ import type { ReactNode } from "react";
  * the outer silently blockifies and stretches to fill the cross axis the
  * moment a caller drops the button straight into a flex/grid container that
  * doesn't itself center its items (e.g. a `flex flex-col` page wrapper).
+ *
+ * Never pass a margin (`m-*`/`mt-*`/…) in `className` — margin on the inner
+ * glass span still grows the OUTER flex container's auto height (margins
+ * count toward a flex item's hypothetical outer size even though they don't
+ * paint), but the blobs are sized to that outer height while the glass
+ * surface stays at its own explicit height, so the extra space shows up as a
+ * bare strip of blob colour above the pill instead of the pill just moving
+ * down. Wrap the `Button` in its own spacing element instead (see Hero.tsx).
  *
  * Never a border — a `border-*` here would sit outside the blobs' padding-box
  * (their `absolute`/`h-full` sizing stops at the padding edge, not the
@@ -29,7 +37,7 @@ import type { ReactNode } from "react";
  * onto `OUTER_CLASSES`.
  */
 const OUTER_CLASSES =
-  "group relative isolate inline-flex w-fit cursor-pointer overflow-hidden rounded-full text-white shadow-edenic-cta";
+  "group relative isolate inline-flex w-fit cursor-pointer overflow-hidden rounded-full text-white";
 
 const GLASS_CLASSES =
   "bg-button-glass relative z-[1] inline-flex items-center rounded-full font-bold backdrop-blur-[10px]";
