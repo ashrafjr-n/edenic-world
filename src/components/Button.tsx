@@ -22,6 +22,11 @@ import type { ReactNode } from "react";
  *
  * `group` is always present so a caller can wiggle its icon on hover with
  * `group-hover:animate-icon-wiggle`, per the project's icon-only hover rule.
+ *
+ * The outer pill itself never scales on hover (that grow-the-whole-button
+ * effect was removed per feedback) — only the inner hover effects do: blob
+ * hue-swap, blob `scale-125`, icon wiggle. Don't add a `hover:scale-*` back
+ * onto `OUTER_CLASSES`.
  */
 const OUTER_CLASSES =
   "group relative isolate inline-flex w-fit cursor-pointer overflow-hidden rounded-full text-white shadow-edenic-cta";
